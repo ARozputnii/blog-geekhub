@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogGeekhub</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="https://i.ibb.co/TbQxTHy/w256h2561372501800-Sketch-Book5.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <%= link_to 'Блокнот', posts_path, class:"navbar-brand" %>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <%= link_to 'Новая запись', new_post_path, class:"nav-link" %>
+            </li>
+            <li class="nav-item ">
+              <%= link_to '', new_post_path, class:"nav-link" %>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+        <%= yield %>
+
   </body>
 </html>

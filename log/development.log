@@ -90,3 +90,1534 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.9ms | Allocations: 6914)
 
 
+Started GET "/posts" for ::1 at 2019-11-09 21:31:20 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1165)
+
+
+  
+SyntaxError (/home/andriy/Рабочий стол/geekhub/homework/blog-geekhub/app/models/post.rb:3: syntax error, unexpected ',', expecting end
+						:title, length: { minimum: 6 }
+						      ^
+/home/andriy/Рабочий стол/geekhub/homework/blog-geekhub/app/models/post.rb:4: syntax error, unexpected ',', expecting end
+						:content, length: { minimum: 10 }
+						        ^):
+  
+app/models/post.rb:3: syntax error, unexpected ',', expecting end
+app/models/post.rb:4: syntax error, unexpected ',', expecting end
+app/models/post.rb:3: syntax error, unexpected ',', expecting end
+app/models/post.rb:4: syntax error, unexpected ',', expecting end
+app/models/post.rb:3: syntax error, unexpected ',', expecting end
+app/models/post.rb:4: syntax error, unexpected ',', expecting end
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for ::1 at 2019-11-09 21:34:42 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1129)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.1ms | Allocations: 8469)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:34:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 646)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.1ms | Allocations: 7195)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:35:04 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1530)
+Completed 200 OK in 2286ms (Views: 2275.7ms | ActiveRecord: 3.0ms | Allocations: 106741)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 21:35:13 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.6ms | Allocations: 3010)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3368)
+Completed 200 OK in 35ms (Views: 16.5ms | ActiveRecord: 6.6ms | Allocations: 16734)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 21:35:46 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"vixcjgpj+KGdp8oqF91hpAiDk/53MUp8pushb/ENvyTvwoSG3cB1FFv4Ty5vjtU5SubHYWyDpHWxb9Yt5n9SHw==", "post"=>{"name"=>"123", "title"=>"cd", "content"=>""}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 7.2ms | Allocations: 1344)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1431)
+Completed 200 OK in 37ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 12858)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 21:35:58 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"sijws8Ymv46uJMtuDr0YWKD6FD46H2JDOGm723KiC7IizHycGtkditBvOjUr7bzTk9epMCy/smmDnGSSQQAGgw==", "post"=>{"name"=>"", "title"=>"cd2222", "content"=>"dadcasdas"}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 8.4ms | Allocations: 1062)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1148)
+Completed 200 OK in 55ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 11673)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 21:36:02 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"7G29LmSBKEqkzV5KaDPElusPPVt+9AyT00xxNN2y4QB8iTEBuH6KTtqGrxFNY2Ad2CKAVWhU3Lloua597hDsMQ==", "post"=>{"name"=>"", "title"=>"cd2222", "content"=>"dadcasdaswdqwq"}, "commit"=>"Create Post"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("name", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["title", "cd2222"], ["content", "dadcasdaswdqwq"], ["created_at", "2019-11-09 19:36:02.679207"], ["updated_at", "2019-11-09 19:36:02.679207"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 30ms (ActiveRecord: 4.0ms | Allocations: 2812)
+
+
+Started GET "/posts/1" for ::1 at 2019-11-09 21:36:02 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 308)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 1.1ms | Allocations: 11095)
+
+
+Started GET "/posts/1/edit" for ::1 at 2019-11-09 21:36:05 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 986)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1241)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 11584)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:36:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 792)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.6ms | Allocations: 10451)
+
+
+Started DELETE "/posts/1" for ::1 at 2019-11-09 21:36:12 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BrKJKr+Jzg0RTywE/ebcG6Wwusx5ySw/IO8buzhG3ViWVgUFY3ZsCW8E3V/YtniQlp0Hwm9p/BWbGsTyC+TQaQ==", "id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (1.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 4.7ms | Allocations: 2658)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:36:12 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 650)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.6ms | Allocations: 10322)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:39:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1245)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.6ms | Allocations: 21366)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:39:43 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1530)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 2.0ms | Allocations: 22461)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:39:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 662)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.6ms | Allocations: 18723)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:39:47 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 656)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.4ms | Allocations: 18718)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:40:10 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 940)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.4ms | Allocations: 19933)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:40:11 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 652)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.4ms | Allocations: 18704)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:40:28 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1530)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 2.8ms | Allocations: 22275)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:40:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 662)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.6ms | Allocations: 18722)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:40:37 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 656)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.5ms | Allocations: 18718)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:40:48 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 940)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.5ms | Allocations: 19931)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:41:02 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1530)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 2.8ms | Allocations: 22275)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:41:56 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1530)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 2.0ms | Allocations: 22274)
+
+
+Started GET "/ss" for ::1 at 2019-11-09 21:42:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ss"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-11-09 21:42:06 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 674)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.5ms | Allocations: 18779)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:42:23 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 990)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 2.0ms | Allocations: 19715)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:42:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 646)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 1.3ms | Allocations: 18697)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:42:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 654)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.4ms | Allocations: 18713)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:42:42 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1530)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 2.5ms | Allocations: 22159)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:42:44 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 662)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.7ms | Allocations: 18722)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:42:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 656)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.5ms | Allocations: 18718)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:42:49 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 656)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.6ms | Allocations: 18715)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:42:52 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 646)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 3.1ms | Allocations: 18697)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:43:58 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 646)
+Completed 200 OK in 1620ms (Views: 1618.4ms | ActiveRecord: 0.7ms | Allocations: 92931)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:44:07 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 984)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 2.1ms | Allocations: 11421)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 21:44:09 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.8ms | Allocations: 3010)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3367)
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 3.6ms | Allocations: 16720)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 21:44:11 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"YYApLeXV7u1T8GZLn74nJigyr/E4xDScjs2sL5Z0yVIwbvElMnZjWJWv40/n7ZO7alf7biN22pWZSVttgQYkaQ==", "post"=>{"name"=>"", "title"=>"dff", "content"=>""}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1343)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1429)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 12860)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:44:16 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 650)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 1.7ms | Allocations: 10308)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:44:26 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 930)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.4ms | Allocations: 98743)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x00005610ba0b18c0>:0x00005610ba0be890>):
+    39:         <li class="dropdown">
+    40:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Профиль<span class="caret"></span></a>
+    41:           <ul class="dropdown-menu">
+    42:           <% if user_signed_in? %>
+    43:             <li><a href="#"><%= link_to "Редактировать профиль", edit_user_registration_path %></a></li>
+    44:             <li><a href="#"><%= link_to "Выйти", destroy_user_session_path, method: :delete %></a></li>
+    45:           <% else %>  
+  
+app/views/layouts/application.html.erb:42
+Started GET "/posts" for ::1 at 2019-11-09 21:45:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 934)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 11624)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:47:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 925)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.6ms | Allocations: 11517)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:48:17 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 930)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 11534)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:48:39 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 925)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 11516)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:50:57 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 925)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 11531)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:51:00 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 654)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.6ms | Allocations: 10310)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:51:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 925)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 11516)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:51:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 925)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 11523)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:52:22 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 925)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 11525)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:53:25 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 925)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 11573)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 21:53:27 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.2ms | Allocations: 1308)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1658)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 11498)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:55:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 925)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 11552)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 21:57:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 654)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1934ms (Views: 1932.1ms | ActiveRecord: 0.4ms | Allocations: 10646)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:57:48 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 648)
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-11-09 21:57:49 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 725)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1964ms (Views: 1961.0ms | ActiveRecord: 1.3ms | Allocations: 24065)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1987ms (Views: 1985.7ms | ActiveRecord: 0.6ms | Allocations: 11590)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:58:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 648)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 5709)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:58:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 646)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 5699)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:59:19 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 646)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 5699)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:59:21 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 646)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 5658)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:59:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 646)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 5699)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:59:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 646)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 5660)
+
+
+Started GET "/" for ::1 at 2019-11-09 21:59:54 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 646)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2924ms (Views: 2921.6ms | ActiveRecord: 0.7ms | Allocations: 68458)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:01:05 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 930)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1788ms (Views: 1785.2ms | ActiveRecord: 0.6ms | Allocations: 11212)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:01:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 925)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1798ms (Views: 1795.2ms | ActiveRecord: 0.5ms | Allocations: 11148)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:01:54 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 925)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1847ms (Views: 1844.4ms | ActiveRecord: 0.5ms | Allocations: 11151)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 22:02:02 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.6ms | Allocations: 1277)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1623)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1812ms (Views: 1808.9ms | ActiveRecord: 0.0ms | Allocations: 11070)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 22:02:06 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"DFzoLNtwT0pr6bIPCUYc41mSX4xtO0uN/I0sxELFYrxdsjAkDNPC/622NwtxFah+G/cLE3aJpYTrCduGVbePhw==", "post"=>{"name"=>"", "title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.5ms | Allocations: 1454)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1540)
+[Webpacker] Compiling…
+Started POST "/posts" for ::1 at 2019-11-09 22:02:08 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"DFzoLNtwT0pr6bIPCUYc41mSX4xtO0uN/I0sxELFYrxdsjAkDNPC/622NwtxFah+G/cLE3aJpYTrCduGVbePhw==", "post"=>{"name"=>"", "title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.8ms | Allocations: 1452)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1538)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1822ms (Views: 1812.3ms | ActiveRecord: 0.0ms | Allocations: 26288)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1815ms (Views: 1812.4ms | ActiveRecord: 0.0ms | Allocations: 13512)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 22:02:16 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"tTjOc8jj+tsruz4weD1wFO0tEEZknkh46BaMUj6a8A3k1hZ7H0B3bu3kuzQAbsSJr0hE2X8spnH/knsQKegdNg==", "post"=>{"name"=>"123", "title"=>"dasdasdsad", "content"=>"dsadasdasdasd"}, "commit"=>"Create Post"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (2.3ms)[0m  [1m[32mINSERT INTO "posts" ("name", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "123"], ["title", "dasdasdsad"], ["content", "dsadasdasdasd"], ["created_at", "2019-11-09 20:02:16.761401"], ["updated_at", "2019-11-09 20:02:16.761401"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 24ms (ActiveRecord: 6.2ms | Allocations: 2822)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-09 22:02:16 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 304)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1828ms (Views: 1802.2ms | ActiveRecord: 1.6ms | Allocations: 12341)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:02:21 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 784)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1802ms (Views: 1801.4ms | ActiveRecord: 0.3ms | Allocations: 10075)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-09 22:02:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 97)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1784ms (Views: 1777.0ms | ActiveRecord: 1.1ms | Allocations: 9923)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:02:32 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 779)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1819ms (Views: 1816.1ms | ActiveRecord: 0.9ms | Allocations: 10076)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 22:02:35 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.8ms | Allocations: 912)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 998)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1893ms (Views: 1892.2ms | ActiveRecord: 0.0ms | Allocations: 10302)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 22:02:42 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"zpoznZqpkQMi6HC73CM3civ+yGalLvuG638WfacVjcSfdOuVTQoctuS39b+kcIPvaZuc+b6cFY/8++E/sGdg/w==", "post"=>{"name"=>"", "title"=>"cd", "content"=>"ewe"}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.3ms | Allocations: 1200)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1286)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1816ms (Views: 1808.5ms | ActiveRecord: 0.0ms | Allocations: 11774)
+
+
+Started POST "/posts" for ::1 at 2019-11-09 22:03:36 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"zpoznZqpkQMi6HC73CM3civ+yGalLvuG638WfacVjcSfdOuVTQoctuS39b+kcIPvaZuc+b6cFY/8++E/sGdg/w==", "post"=>{"name"=>"", "title"=>"cd", "content"=>"ewe"}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.5ms | Allocations: 1200)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1286)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1804ms (Views: 1799.7ms | ActiveRecord: 0.0ms | Allocations: 11767)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:03:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1062)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 500 Internal Server Error in 2011ms (ActiveRecord: 0.4ms | Allocations: 98611)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x00005610ba8e85c0>:0x00005610ba8ee8a8>):
+    42:         <li class="dropdown">
+    43:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Профиль<span class="caret"></span></a>
+    44:           <ul class="dropdown-menu">
+    45:           <% if user_signed_in? %>
+    46:             <li><a href="#"><%= link_to "Редактировать профиль", edit_user_registration_path %></a></li>
+    47:             <li><a href="#"><%= link_to "Выйти", destroy_user_session_path, method: :delete %></a></li>
+    48:           <% else %>  
+  
+app/views/layouts/application.html.erb:45
+Started GET "/" for ::1 at 2019-11-09 22:04:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1057)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1816ms (Views: 1813.6ms | ActiveRecord: 0.5ms | Allocations: 11319)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:06:06 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1802ms (Views: 1799.8ms | ActiveRecord: 0.5ms | Allocations: 11295)
+
+
+Started GET "/..." for ::1 at 2019-11-09 22:06:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-11-09 22:08:44 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1057)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1858ms (Views: 1856.4ms | ActiveRecord: 0.5ms | Allocations: 11290)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:09:51 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1804ms (Views: 1800.8ms | ActiveRecord: 0.5ms | Allocations: 11290)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:16:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1136)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1822ms (Views: 1820.2ms | ActiveRecord: 0.6ms | Allocations: 11366)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:16:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1870ms (Views: 1868.6ms | ActiveRecord: 0.3ms | Allocations: 11297)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:18:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1857ms (Views: 1853.1ms | ActiveRecord: 1.1ms | Allocations: 11312)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:19:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1828ms (Views: 1825.4ms | ActiveRecord: 0.5ms | Allocations: 11351)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:19:37 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1069)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1922ms (Views: 1919.9ms | ActiveRecord: 0.4ms | Allocations: 11368)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:19:55 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1832ms (Views: 1830.4ms | ActiveRecord: 0.4ms | Allocations: 11311)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:21:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1829ms (Views: 1826.6ms | ActiveRecord: 0.4ms | Allocations: 11350)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:21:52 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1952ms (Views: 1950.2ms | ActiveRecord: 0.5ms | Allocations: 11347)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:22:17 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1821ms (Views: 1819.4ms | ActiveRecord: 0.3ms | Allocations: 11358)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:23:00 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1064)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1874ms (Views: 1869.8ms | ActiveRecord: 1.3ms | Allocations: 11364)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 22:23:03 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.7ms | Allocations: 1287)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1632)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1813ms (Views: 1810.0ms | ActiveRecord: 0.0ms | Allocations: 11094)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:24:27 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1826ms (Views: 1824.8ms | ActiveRecord: 0.4ms | Allocations: 11352)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:26:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1879ms (Views: 1875.8ms | ActiveRecord: 1.2ms | Allocations: 11793)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:27:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1842ms (Views: 1840.2ms | ActiveRecord: 0.4ms | Allocations: 11386)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:28:13 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2026ms (Views: 2022.4ms | ActiveRecord: 1.1ms | Allocations: 11384)
+
+
+Started GET "/%3Ca%20href=" for ::1 at 2019-11-09 22:28:18 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/%3Ca%20href="):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/%3Ca%20href=" for ::1 at 2019-11-09 22:28:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/%3Ca%20href="):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/%3Ca%20href=" for ::1 at 2019-11-09 22:29:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/%3Ca%20href="):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-11-09 22:29:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1057)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1883ms (Views: 1878.7ms | ActiveRecord: 1.5ms | Allocations: 11309)
+
+
+Started GET "/" for ::1 at 2019-11-09 22:30:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1059)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3329)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <%= link_to 'Блокнот', posts_path, class="navbar-brand" %>
+
+        <img src="https://i.ibb.co/TbQxTHy/w256h2561372501800-Sketch-Book5.png" width="30" height="30" class="d-inline-block align-top" alt="">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+        <%= yield %>
+
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Blog</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:        <meta name="viewport" content="width=device-width, initial-scale=1">
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <div class="container">
+14:          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+15:        
+16:            <%= link_to 'Блокнот', posts_path, class="navbar-brand" %>
+17:    
+18:            <img src="https://i.ibb.co/TbQxTHy/w256h2561372501800-Sketch-Book5.png" width="30" height="30" class="d-inline-block align-top" alt="">
+19:    
+20:            <div class="collapse navbar-collapse" id="navbarNav">
+21:              <ul class="navbar-nav">
+22:                <li class="nav-item active">
+23:                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+24:                </li>
+25:                <li class="nav-item">
+26:                  <a class="nav-link" href="#">Features</a>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <a class="nav-link" href="#">Pricing</a>
+30:                </li>
+31:                <li class="nav-item">
+32:                  <a class="nav-link disabled" href="#">Disabled</a>
+33:                </li>
+34:              </ul>
+35:            </div>
+36:    
+37:          </nav>
+38:        </div>
+39:    
+40:            <%= yield %>
+41:    
+42:      </body>
+43:    </html>
+  
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+app/views/layouts/application.html.erb:16: syntax error, unexpected '='
+Started GET "/" for ::1 at 2019-11-09 22:30:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1062)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1838ms (Views: 1835.5ms | ActiveRecord: 0.5ms | Allocations: 11380)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:31:03 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 784)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1863ms (Views: 1861.7ms | ActiveRecord: 0.4ms | Allocations: 10105)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-09 22:31:06 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 302)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1845ms (Views: 1837.4ms | ActiveRecord: 1.2ms | Allocations: 10333)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:31:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 782)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1820ms (Views: 1816.7ms | ActiveRecord: 1.1ms | Allocations: 10109)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:31:42 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 779)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1956ms (Views: 1954.8ms | ActiveRecord: 0.4ms | Allocations: 10106)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:31:47 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 779)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2007ms (Views: 2005.0ms | ActiveRecord: 0.5ms | Allocations: 10101)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:31:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1946ms (Views: 1942.8ms | ActiveRecord: 0.6ms | Allocations: 11366)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:34:25 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1812ms (Views: 1809.9ms | ActiveRecord: 0.6ms | Allocations: 11420)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:35:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1064)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1859ms (Views: 1856.5ms | ActiveRecord: 0.7ms | Allocations: 11471)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:35:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 783)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1894ms (Views: 1890.2ms | ActiveRecord: 1.1ms | Allocations: 10166)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:36:12 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1909ms (Views: 1906.7ms | ActiveRecord: 0.4ms | Allocations: 11453)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-09 22:36:34 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 302)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1867ms (Views: 1859.5ms | ActiveRecord: 1.0ms | Allocations: 10364)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-09 22:36:37 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.0ms | Allocations: 1287)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1631)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1859ms (Views: 1858.4ms | ActiveRecord: 0.0ms | Allocations: 11163)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:36:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 783)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1834ms (Views: 1832.4ms | ActiveRecord: 0.5ms | Allocations: 10177)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:45:05 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1136)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1892ms (Views: 1890.5ms | ActiveRecord: 0.8ms | Allocations: 11538)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:46:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1064)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1854ms (Views: 1852.7ms | ActiveRecord: 0.3ms | Allocations: 11417)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:46:31 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1059)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1955ms (Views: 1953.5ms | ActiveRecord: 0.4ms | Allocations: 11453)
+
+
+Started GET "/posts" for ::1 at 2019-11-09 22:48:08 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 783)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1836ms (Views: 1834.7ms | ActiveRecord: 0.5ms | Allocations: 10163)
+
+
