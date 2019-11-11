@@ -1,2 +1,43 @@
 
 @import "bootstrap";
+
+
+.titles {
+	font-size: 40px;
+	color: #013a40;
+	text-transform: uppercase;
+	text-align: center;
+	background: url(https://www.groovypost.com/wp-content/uploads/2012/06/notepad-featured.jpg) no-repeat center top / cover ;
+}
+
+.button_new_post {
+	background: #fed136 ;
+	border-radius: 3px;
+	display: block;
+	width: 240px ;
+	margin: 0px auto;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px ;
+	margin-top: 20px;
+}
+
+.new_post {
+	height: 200px;
+	background: url(https://bankoboev.ru/storage/fon/bankoboev.ru-12578.jpg) no-repeat center top / cover ;
+}
+.p_new {
+	font-size: 40px;
+	margin-left: 50px;
+	padding-top: 60px;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.form-group {
+	margin-top: 50px;
+	font-size: 20px;
+}
