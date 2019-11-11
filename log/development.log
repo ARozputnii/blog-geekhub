@@ -10671,3 +10671,16 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 1457ms (Views: 1454.9ms | ActiveRecord: 0.3ms | Allocations: 10401)
 
 
+Started GET "/posts/4" for ::1 at 2019-11-11 12:34:45 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1683ms (Views: 1680.8ms | ActiveRecord: 0.4ms | Allocations: 10084)
+
+
