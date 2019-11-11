@@ -10684,3 +10684,403 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 1683ms (Views: 1680.8ms | ActiveRecord: 0.4ms | Allocations: 10084)
 
 
+Started GET "/" for ::1 at 2019-11-11 19:23:06 +0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 5481)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2327ms (Views: 2307.8ms | ActiveRecord: 8.0ms | Allocations: 43331)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-11 19:23:13 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.8ms | Allocations: 3027)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3343)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1308ms (Views: 1306.5ms | ActiveRecord: 0.0ms | Allocations: 12915)
+
+
+Started GET "/" for ::1 at 2019-11-11 19:23:23 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1015)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1593ms (Views: 1591.2ms | ActiveRecord: 0.5ms | Allocations: 10429)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-11 19:27:27 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 8.5ms | Allocations: 967)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1031)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1326ms (Views: 1318.0ms | ActiveRecord: 0.0ms | Allocations: 10437)
+
+
+Started GET "/" for ::1 at 2019-11-11 19:27:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1012)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1317ms (Views: 1312.5ms | ActiveRecord: 1.7ms | Allocations: 10416)
+
+
+Started GET "/posts/4" for ::1 at 2019-11-11 19:28:01 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 322)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1341ms (Views: 1302.6ms | ActiveRecord: 1.8ms | Allocations: 12466)
+
+
+Started GET "/posts/4" for ::1 at 2019-11-11 19:28:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1299ms (Views: 1292.7ms | ActiveRecord: 1.0ms | Allocations: 10071)
+
+
+Started GET "/posts/4/edit" for ::1 at 2019-11-11 19:28:12 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 11.0ms | Allocations: 1045)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1305)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1354ms (Views: 1346.8ms | ActiveRecord: 1.1ms | Allocations: 11388)
+
+
+Started PATCH "/posts/4" for ::1 at 2019-11-11 19:28:33 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"5VChrTmdIMJfsKakGzkUNAJAAVuxG/kal7sZ1e6p04H3jpjlHU65nisZJcTyDQYkSn5tKk3m0WqAlL1P5a5gSw==", "post"=>{"name"=>"Andriy", "title"=>"Активное состояние", "content"=>"Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение.\r\nNtutn\r\nYUmn\r\nyyuny"}, "commit"=>"Update Post", "id"=>"4"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "Активное состояние"], ["content", "Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение.\r\nNtutn\r\nYUmn\r\nyyuny"], ["updated_at", "2019-11-11 17:28:33.310363"], ["id", 4]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 17ms (ActiveRecord: 2.8ms | Allocations: 3540)
+
+
+Started GET "/posts/4" for ::1 at 2019-11-11 19:28:33 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 129)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1298ms (Views: 1295.9ms | ActiveRecord: 0.3ms | Allocations: 10061)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:28:36 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1005)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1410ms (Views: 1407.2ms | ActiveRecord: 1.3ms | Allocations: 10406)
+
+
+Started GET "/posts/5" for ::1 at 2019-11-11 19:28:44 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1385ms (Views: 1378.5ms | ActiveRecord: 1.1ms | Allocations: 10056)
+
+
+Started GET "/posts/5/edit" for ::1 at 2019-11-11 19:28:47 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.1ms | Allocations: 1017)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1133)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1364ms (Views: 1359.5ms | ActiveRecord: 0.8ms | Allocations: 11064)
+
+
+Started PATCH "/posts/5" for ::1 at 2019-11-11 19:28:56 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"V2b5tt4JF8gC3zn+QridAtRFfK0Aso0xE//6bIrvEyulqavSxz7VdnC0kI6Rz9EgxwLVGb/Cjn5P/8MunVtDdw==", "post"=>{"name"=>"Andriy", "title"=>"Группа кнопок", "content"=>"Группируйте серию кнопок горизонтально в ряд с помощью «группы кнопок» и снабдите ее функциональностью и мощью JavaScript для ваших нужд."}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "Группа кнопок"], ["content", "Группируйте серию кнопок горизонтально в ряд с помощью «группы кнопок» и снабдите ее функциональностью и мощью JavaScript для ваших нужд."], ["updated_at", "2019-11-11 17:28:56.915037"], ["id", 5]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms | Allocations: 3255)
+
+
+Started GET "/posts/5" for ::1 at 2019-11-11 19:28:56 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1340ms (Views: 1337.3ms | ActiveRecord: 0.4ms | Allocations: 10063)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:29:05 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1004)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1369ms (Views: 1366.6ms | ActiveRecord: 1.1ms | Allocations: 10410)
+
+
+Started GET "/posts/6" for ::1 at 2019-11-11 19:29:10 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1330ms (Views: 1326.9ms | ActiveRecord: 0.5ms | Allocations: 10063)
+
+
+Started GET "/posts/6/edit" for ::1 at 2019-11-11 19:29:13 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 10.2ms | Allocations: 1017)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1133)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1317ms (Views: 1309.0ms | ActiveRecord: 1.1ms | Allocations: 11069)
+
+
+Started PATCH "/posts/6" for ::1 at 2019-11-11 19:29:26 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"1/jtseY+6pOa9k1hrkIAKLuX1/pqb264mFB4KGKr8ztwcfnBi10911llh/NcCodFTumYoMs+jORSy0dmRLdRWA==", "post"=>{"name"=>"Andriy", "title"=>"Базовые примеры", "content"=>"Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки).Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки)."}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "Базовые примеры"], ["content", "Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки).Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки)."], ["updated_at", "2019-11-11 17:29:26.624149"], ["id", 6]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms | Allocations: 3266)
+
+
+Started GET "/posts/6" for ::1 at 2019-11-11 19:29:26 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1291ms (Views: 1288.2ms | ActiveRecord: 0.4ms | Allocations: 10060)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:29:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1006)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1421ms (Views: 1418.2ms | ActiveRecord: 1.1ms | Allocations: 10404)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 19:29:35 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1318ms (Views: 1307.0ms | ActiveRecord: 1.0ms | Allocations: 10060)
+
+
+Started GET "/posts/2/edit" for ::1 at 2019-11-11 19:29:39 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 7.5ms | Allocations: 1016)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1132)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1346ms (Views: 1339.1ms | ActiveRecord: 0.9ms | Allocations: 11063)
+
+
+Started PATCH "/posts/2" for ::1 at 2019-11-11 19:29:58 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"vy7i03JD8fdkFzbsQVfyAQDzItoBZYJ8JkuDT5p9B1xPycynamKOzAzIaqVR8mp1ZGjevFb0vM58v7RFBGxmOw==", "post"=>{"name"=>"12", "title"=>"Кнопки «тулбаров»", "content"=>"Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки)."}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (1.0ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "Кнопки «тулбаров»"], ["content", "Снабдите каждую кнопку из серии классом .btn, и всю эту серию оберните классом .btn-group. Добавьте по желанию наш «кнопочный» плагин JavaScript для добавления оформления кнопок в стиле радио или «чекбокса» (флажки)."], ["updated_at", "2019-11-11 17:29:58.811368"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 20ms (ActiveRecord: 5.4ms | Allocations: 3264)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 19:29:58 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1297ms (Views: 1294.6ms | ActiveRecord: 0.3ms | Allocations: 10055)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:30:02 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1007)
+[Webpacker] Compiling…
+Started GET "/posts" for ::1 at 2019-11-11 19:30:02 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1084)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1568ms (Views: 1565.1ms | ActiveRecord: 1.0ms | Allocations: 23633)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1508ms (Views: 1506.9ms | ActiveRecord: 0.5ms | Allocations: 11572)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:30:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1007)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2613ms (Views: 2611.6ms | ActiveRecord: 0.6ms | Allocations: 71824)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:31:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1007)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2250ms (Views: 2248.1ms | ActiveRecord: 0.5ms | Allocations: 71014)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:31:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1007)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2344ms (Views: 2342.8ms | ActiveRecord: 0.7ms | Allocations: 70608)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 19:32:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1261)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1418ms (Views: 1416.4ms | ActiveRecord: 0.4ms | Allocations: 11657)
+
+
