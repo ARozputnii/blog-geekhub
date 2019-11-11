@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="show">
+<p class="label_show">Name:</p>
+  <div><%= @post.name %></div>
+</div>
+<div class="show">
+  <p class="label_show">Title:</p>
+  <div><%= @post.title %></div>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="show">
+  <p class="label_show">Content:</p>
+  <div><%= @post.content %></div>
+</div>
+<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-success" %>
+<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-success" %>

@@ -9070,3 +9070,1604 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 1340ms (Views: 1336.8ms | ActiveRecord: 1.1ms | Allocations: 10351)
 
 
+Started GET "/" for ::1 at 2019-11-11 12:04:06 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1284)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1602ms (Views: 1597.8ms | ActiveRecord: 3.0ms | Allocations: 11666)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-11 12:04:15 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.1ms | Allocations: 1357)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1664)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1534ms (Views: 1532.5ms | ActiveRecord: 0.0ms | Allocations: 11200)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:04:19 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 964)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1538ms (Views: 1536.5ms | ActiveRecord: 0.4ms | Allocations: 10349)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:22 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 323)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1502ms (Views: 1499.4ms | ActiveRecord: 0.5ms | Allocations: 10414)
+
+
+Started GET "/posts/2/edit" for ::1 at 2019-11-11 12:04:25 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.6ms | Allocations: 1023)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1277)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1498ms (Views: 1495.9ms | ActiveRecord: 0.4ms | Allocations: 11335)
+
+
+Started PATCH "/posts/2" for ::1 at 2019-11-11 12:04:30 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"UEqoZSMC0SOpOKbnnKvD7GXp+Dfk/RBa10BoZ0RXEE2grYYROyOuGMHn+q6MDluYAXIEUbNsLuiNtF9t2kZxKg==", "post"=>{"name"=>"1234", "title"=>"dasdasdsad", "content"=>"dsadasdasdasd"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE "posts" SET "name" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["name", "1234"], ["updated_at", "2019-11-11 10:04:30.571655"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 15ms (ActiveRecord: 7.4ms | Allocations: 3262)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:30 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1451ms (Views: 1448.7ms | ActiveRecord: 0.4ms | Allocations: 10064)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:34 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1547ms (Views: 1544.9ms | ActiveRecord: 0.4ms | Allocations: 10040)
+
+
+Started GET "/" for ::1 at 2019-11-11 12:04:38 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 962)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1644ms (Views: 1643.3ms | ActiveRecord: 0.3ms | Allocations: 10351)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:45 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1556ms (Views: 1553.1ms | ActiveRecord: 0.4ms | Allocations: 10048)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:47 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1383ms (Views: 1381.0ms | ActiveRecord: 0.3ms | Allocations: 10047)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:04:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 961)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1462ms (Views: 1461.0ms | ActiveRecord: 0.4ms | Allocations: 10344)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:56 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1446ms (Views: 1443.6ms | ActiveRecord: 0.2ms | Allocations: 10042)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:04:58 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1517ms (Views: 1515.4ms | ActiveRecord: 0.2ms | Allocations: 10051)
+
+
+Started GET "/posts/2/edit" for ::1 at 2019-11-11 12:05:01 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 1015)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1131)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1476ms (Views: 1474.0ms | ActiveRecord: 0.2ms | Allocations: 11060)
+
+
+Started PATCH "/posts/2" for ::1 at 2019-11-11 12:05:06 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"ATCM2UJiqPd5IIXsgTIZENc2pc6HacMmAX4lteiI5E3x16KtWkPXzBH/2aWRl4Fks61ZqND4/ZRbihK/dpmFKg==", "post"=>{"name"=>"12", "title"=>"dasdasdsad", "content"=>"dsadasdasdasd"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE "posts" SET "name" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["name", "12"], ["updated_at", "2019-11-11 10:05:06.047894"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 14ms (ActiveRecord: 7.1ms | Allocations: 3227)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:05:06 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 126)
+[Webpacker] Compiling…
+Started PATCH "/posts/2" for ::1 at 2019-11-11 12:05:07 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"ATCM2UJiqPd5IIXsgTIZENc2pc6HacMmAX4lteiI5E3x16KtWkPXzBH/2aWRl4Fks61ZqND4/ZRbihK/dpmFKg==", "post"=>{"name"=>"12", "title"=>"dasdasdsad", "content"=>"dsadasdasdasd"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 13ms (ActiveRecord: 8.2ms | Allocations: 1322)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-11 12:05:07 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1612ms (Views: 1610.1ms | ActiveRecord: 0.2ms | Allocations: 26261)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1739ms (Views: 1736.0ms | ActiveRecord: 1.3ms | Allocations: 11106)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:05:10 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 963)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1545ms (Views: 1543.7ms | ActiveRecord: 0.3ms | Allocations: 10345)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:05:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 124)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1610ms (Views: 1607.8ms | ActiveRecord: 0.3ms | Allocations: 10044)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:06:37 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1414ms (Views: 1411.5ms | ActiveRecord: 0.3ms | Allocations: 11253)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:07:05 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 344)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1409ms (Views: 1407.3ms | ActiveRecord: 0.3ms | Allocations: 11256)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:07:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 144)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1757ms (Views: 1755.6ms | ActiveRecord: 0.3ms | Allocations: 10067)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:07:23 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 349)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1552ms (Views: 1550.4ms | ActiveRecord: 0.3ms | Allocations: 11274)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:07:26 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1631ms (Views: 1628.6ms | ActiveRecord: 0.3ms | Allocations: 10067)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:07:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1249)
+[Webpacker] Compiling…
+Started GET "/posts" for ::1 at 2019-11-11 12:07:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1001)
+[Webpacker] Compiling…
+Started GET "/posts" for ::1 at 2019-11-11 12:07:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1078)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1645ms (Views: 1643.3ms | ActiveRecord: 0.5ms | Allocations: 35084)
+
+
+Started GET "/" for ::1 at 2019-11-11 12:07:31 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1001)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2357ms (Views: 2355.9ms | ActiveRecord: 0.4ms | Allocations: 35747)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2220ms (Views: 2219.1ms | ActiveRecord: 0.6ms | Allocations: 23671)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1743ms (Views: 1738.2ms | ActiveRecord: 3.6ms | Allocations: 12449)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:07:40 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1380ms (Views: 1377.6ms | ActiveRecord: 0.3ms | Allocations: 10062)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:08:00 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 348)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1607ms (Views: 1604.9ms | ActiveRecord: 0.3ms | Allocations: 11271)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:08:19 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 343)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1604ms (Views: 1602.0ms | ActiveRecord: 0.2ms | Allocations: 11257)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:08:25 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1249)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1348ms (Views: 1346.7ms | ActiveRecord: 0.3ms | Allocations: 10776)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:09:10 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1250)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1452ms (Views: 1450.4ms | ActiveRecord: 0.3ms | Allocations: 11623)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:13:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1250)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1420ms (Views: 1419.4ms | ActiveRecord: 0.3ms | Allocations: 11628)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:13:10 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 343)
+[Webpacker] Compiling…
+Started GET "/posts/3" for ::1 at 2019-11-11 12:13:10 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1931ms (Views: 1928.6ms | ActiveRecord: 0.3ms | Allocations: 21277)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1987ms (Views: 1982.9ms | ActiveRecord: 0.5ms | Allocations: 11131)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:13:30 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1513ms (Views: 1510.3ms | ActiveRecord: 0.4ms | Allocations: 10056)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:13:33 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1644ms (Views: 1642.0ms | ActiveRecord: 0.6ms | Allocations: 10058)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:14:02 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1164)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-success" %>
+    19: <%= link_to 'Delete', post_path(@post), method::delete, data: { confirm: 'Are you sure?' } , class:"btn btn-success" %>
+  
+app/views/posts/show.html.erb:19:in `method'
+app/views/posts/show.html.erb:19
+Started GET "/posts/3" for ::1 at 2019-11-11 12:14:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 343)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1503ms (Views: 1500.2ms | ActiveRecord: 0.4ms | Allocations: 11262)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:14:12 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1449ms (Views: 1446.8ms | ActiveRecord: 0.4ms | Allocations: 10065)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:14:13 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1719ms (Views: 1717.0ms | ActiveRecord: 0.3ms | Allocations: 10068)
+
+
+Started GET "/" for ::1 at 2019-11-11 12:14:16 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1249)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1591ms (Views: 1589.0ms | ActiveRecord: 0.5ms | Allocations: 10776)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-11 12:14:18 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.7ms | Allocations: 1357)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1659)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1361ms (Views: 1360.5ms | ActiveRecord: 0.0ms | Allocations: 11194)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:14:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1004)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1394ms (Views: 1393.3ms | ActiveRecord: 0.3ms | Allocations: 10392)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:15:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1001)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2993ms (Views: 2992.4ms | ActiveRecord: 0.3ms | Allocations: 70134)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:15:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1001)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1591ms (Views: 1589.6ms | ActiveRecord: 0.4ms | Allocations: 10832)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:15:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1001)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2472ms (Views: 2470.9ms | ActiveRecord: 0.4ms | Allocations: 70917)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:16:19 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 141)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1598ms (Views: 1595.8ms | ActiveRecord: 0.3ms | Allocations: 10063)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:17:42 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1523ms (Views: 1520.2ms | ActiveRecord: 0.4ms | Allocations: 10191)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:17:46 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 350)
+Started GET "/posts/3" for ::1 at 2019-11-11 12:17:46 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[Webpacker] Compiling…
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1585ms (Views: 1581.8ms | ActiveRecord: 0.7ms | Allocations: 10605)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1715ms (Views: 1709.0ms | ActiveRecord: 0.6ms | Allocations: 24017)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:18:02 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1267ms (Views: 1265.1ms | ActiveRecord: 0.3ms | Allocations: 10191)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:19:20 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 344)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1568ms (Views: 1565.9ms | ActiveRecord: 0.3ms | Allocations: 11388)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:19:53 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 335)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.3ms | Allocations: 18535)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:19:58 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 146)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2812ms (Views: 2808.8ms | ActiveRecord: 0.4ms | Allocations: 70998)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:20:26 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2976ms (Views: 2972.2ms | ActiveRecord: 0.4ms | Allocations: 70963)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:21:03 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+Started GET "/posts/3" for ::1 at 2019-11-11 12:21:03 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1623ms (Views: 1619.2ms | ActiveRecord: 0.4ms | Allocations: 20931)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1686ms (Views: 1678.1ms | ActiveRecord: 0.4ms | Allocations: 11098)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:21:08 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2778ms (Views: 2775.5ms | ActiveRecord: 0.4ms | Allocations: 72162)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:21:29 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2947ms (Views: 2942.4ms | ActiveRecord: 0.4ms | Allocations: 69741)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:21:43 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2939ms (Views: 2937.1ms | ActiveRecord: 0.3ms | Allocations: 71000)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:22:48 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2832ms (Views: 2829.3ms | ActiveRecord: 0.8ms | Allocations: 70545)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:23:33 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2460ms (Views: 2457.3ms | ActiveRecord: 0.3ms | Allocations: 71431)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:23:55 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1502ms (Views: 1499.5ms | ActiveRecord: 0.3ms | Allocations: 10187)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:23:59 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 345)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1454ms (Views: 1448.1ms | ActiveRecord: 0.6ms | Allocations: 11263)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2539ms (Views: 2537.4ms | ActiveRecord: 0.3ms | Allocations: 71047)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:15 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2588ms (Views: 2584.2ms | ActiveRecord: 0.4ms | Allocations: 71838)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:19 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1450ms (Views: 1447.9ms | ActiveRecord: 0.3ms | Allocations: 10058)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:25 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1414ms (Views: 1411.3ms | ActiveRecord: 0.5ms | Allocations: 10612)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 340)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1311ms (Views: 1309.1ms | ActiveRecord: 0.3ms | Allocations: 11259)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:40 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2756ms (Views: 2754.1ms | ActiveRecord: 0.3ms | Allocations: 71007)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:24:47 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1311ms (Views: 1307.9ms | ActiveRecord: 0.5ms | Allocations: 10061)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:25:24 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1558ms (Views: 1553.1ms | ActiveRecord: 1.8ms | Allocations: 10195)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:25:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 342)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1347ms (Views: 1344.4ms | ActiveRecord: 0.3ms | Allocations: 11259)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:25:59 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2684ms (Views: 2682.1ms | ActiveRecord: 0.3ms | Allocations: 70562)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:26:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 139)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1540ms (Views: 1534.4ms | ActiveRecord: 0.4ms | Allocations: 10188)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:26:11 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 314)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1399ms (Views: 1396.2ms | ActiveRecord: 0.3ms | Allocations: 11241)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:27:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1284ms (Views: 1282.4ms | ActiveRecord: 0.3ms | Allocations: 10170)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:27:50 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 312)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2609ms (Views: 2606.5ms | ActiveRecord: 0.3ms | Allocations: 73363)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:28:01 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2687ms (Views: 2683.8ms | ActiveRecord: 0.4ms | Allocations: 70222)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:28:21 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2821ms (Views: 2818.1ms | ActiveRecord: 0.4ms | Allocations: 71454)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:28:30 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2786ms (Views: 2783.3ms | ActiveRecord: 0.4ms | Allocations: 70587)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:28:40 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2825ms (Views: 2822.1ms | ActiveRecord: 0.5ms | Allocations: 70531)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:29:06 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2879ms (Views: 2875.2ms | ActiveRecord: 0.4ms | Allocations: 71017)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:29:33 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2539ms (Views: 2536.0ms | ActiveRecord: 0.4ms | Allocations: 69797)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:29:54 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 2898ms (Views: 2895.0ms | ActiveRecord: 0.5ms | Allocations: 71016)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:30:24 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (5.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 126)
+[Webpacker] Compiling…
+Started GET "/posts/3" for ::1 at 2019-11-11 12:30:24 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1694ms (Views: 1682.1ms | ActiveRecord: 5.0ms | Allocations: 22960)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1679ms (Views: 1672.3ms | ActiveRecord: 2.8ms | Allocations: 11178)
+
+
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:30:27 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.0ms | Allocations: 1405)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1804)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1511ms (Views: 1508.2ms | ActiveRecord: 0.5ms | Allocations: 11872)
+
+
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:03 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"1+G2e8pAbOLMgfLKuN71dDQhLbN1R6yR1wpkMbOEmTYOLF6snTSpwcVm12QmfUWkpAzuOhKXi/2tB78jyfrWJw==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"fwfefeferferfАктивное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (0.7ms)[0m  [1m[33mUPDATE "posts" SET "name" = $1, "title" = $2, "content" = $3, "updated_at" = $4 WHERE "posts"."id" = $5[0m  [["name", "Andrii"], ["title", "Размеры"], ["content", "fwfefeferferfАктивное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."], ["updated_at", "2019-11-11 10:31:03.333672"], ["id", 3]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 17ms (ActiveRecord: 7.8ms | Allocations: 3250)
+
+
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:31:03 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1018)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1134)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1385ms (Views: 1382.3ms | ActiveRecord: 0.5ms | Allocations: 11070)
+
+
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:08 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"5fjd501A53LHVgrvzKMfOedyVIhBQN3cuW7KaIqbunM8NTUwGjQiUc6xL0FSAK/pd1+XASaQ+rDDYxF68OX1Yg==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"fwfefeferferfАктивное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1231)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:31:08 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:31:08 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.8ms | Allocations: 1018)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1295)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1619ms (Views: 1615.7ms | ActiveRecord: 0.5ms | Allocations: 21944)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1620ms (Views: 1617.3ms | ActiveRecord: 0.5ms | Allocations: 12684)
+
+
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:14 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"clXSGVFQ3SN4d3Rvht1zXeCduzt3sSwGioOk0DexxCmrmDrOBiQYAHGQUcEYfsONcLB4shBhC2rwjn/CTc+LOA==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[36mPost Update (1.5ms)[0m  [1m[33mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["content", "Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."], ["updated_at", "2019-11-11 10:31:14.968962"], ["id", 3]]
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 31ms (ActiveRecord: 6.5ms | Allocations: 3246)
+
+
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:31:15 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.6ms | Allocations: 1018)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1134)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1319ms (Views: 1315.7ms | ActiveRecord: 0.4ms | Allocations: 11071)
+
+
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:18 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"2rNSqwy13p1Q5sOhjARvvR7Df3fh8V0hvK4Wfrl1I1UDfrp8W8EbvlkB5g8Sp99tju68/oYhek3Go81swwtsRA==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1220)
+
+
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:31:18 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.2ms | Allocations: 1018)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1134)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1301ms (Views: 1298.4ms | ActiveRecord: 0.3ms | Allocations: 11067)
+
+
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:20 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"mYr7cOlDBiJhJfiU2TsDcSxLdpbjh3y2Dkvz+j52BFtARxOnvjfDAWjC3TpHmLOhvGa1H4RXW9p0RijoRAhLSg==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:31:20 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 127)
+[Webpacker] Compiling…
+Started PATCH "/posts/3" for ::1 at 2019-11-11 12:31:21 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"mYr7cOlDBiJhJfiU2TsDcSxLdpbjh3y2Dkvz+j52BFtARxOnvjfDAWjC3TpHmLOhvGa1H4RXW9p0RijoRAhLSg==", "post"=>{"name"=>"Andrii", "title"=>"Размеры", "content"=>"Активное состояние\r\nКогда кнопки нажимают, появляется более темный фон, границы и внутренняя тень. В BS4 нет необходимости добавлять класс в <button>, т.к. тут используется псевдо-класс. Однако вы можете вызвать «активное» поведение и соответствующий внешний вид, добавив класс .active (и включив атрибут aria-pressed=\"true\") , когда необходимо прямо объявить такое поведение."}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1243)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:31:21 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1742ms (Views: 1740.2ms | ActiveRecord: 0.4ms | Allocations: 24793)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1760ms (Views: 1758.5ms | ActiveRecord: 0.3ms | Allocations: 11152)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:31:55 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1527ms (Views: 1522.3ms | ActiveRecord: 2.7ms | Allocations: 10194)
+
+
+Started GET "/posts/3" for ::1 at 2019-11-11 12:31:58 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 314)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1597ms (Views: 1594.0ms | ActiveRecord: 0.4ms | Allocations: 11245)
+
+
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:32:01 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.6ms | Allocations: 1408)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1800)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1407ms (Views: 1404.7ms | ActiveRecord: 0.3ms | Allocations: 11885)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:07 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1252)
+[Webpacker] Compiling…
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:32:07 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.7ms | Allocations: 1020)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1137)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1756ms (Views: 1751.9ms | ActiveRecord: 1.0ms | Allocations: 22651)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1751ms (Views: 1746.7ms | ActiveRecord: 0.6ms | Allocations: 12165)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:13 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1002)
+Started GET "/posts/3/edit" for ::1 at 2019-11-11 12:32:13 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1018)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1134)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1616ms (Views: 1613.2ms | ActiveRecord: 1.1ms | Allocations: 22286)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1577ms (Views: 1574.4ms | ActiveRecord: 0.4ms | Allocations: 12729)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:17 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1002)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1328ms (Views: 1326.5ms | ActiveRecord: 0.4ms | Allocations: 10402)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1002)
+[Webpacker] Compiling…
+Started GET "/posts" for ::1 at 2019-11-11 12:32:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1002)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1756ms (Views: 1752.4ms | ActiveRecord: 1.1ms | Allocations: 21569)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1684ms (Views: 1681.8ms | ActiveRecord: 1.0ms | Allocations: 11495)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-11 12:32:26 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.7ms | Allocations: 975)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1144)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1518ms (Views: 1517.3ms | ActiveRecord: 0.0ms | Allocations: 10691)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1005)
+[Webpacker] Compiling…
+Started GET "/posts/new" for ::1 at 2019-11-11 12:32:35 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.7ms | Allocations: 967)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1031)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1682ms (Views: 1678.4ms | ActiveRecord: 1.2ms | Allocations: 21660)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1721ms (Views: 1720.3ms | ActiveRecord: 0.0ms | Allocations: 11570)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1002)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1289ms (Views: 1288.1ms | ActiveRecord: 0.3ms | Allocations: 10400)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:48 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1002)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1271ms (Views: 1269.3ms | ActiveRecord: 0.5ms | Allocations: 10531)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:51 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1255)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1330ms (Views: 1328.1ms | ActiveRecord: 0.4ms | Allocations: 11780)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:55 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1250)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1479ms (Views: 1476.1ms | ActiveRecord: 0.5ms | Allocations: 12463)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:32:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1250)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1272ms (Views: 1270.3ms | ActiveRecord: 0.3ms | Allocations: 12248)
+
+
+Started GET "/posts" for ::1 at 2019-11-11 12:33:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1250)
+Started GET "/posts" for ::1 at 2019-11-11 12:33:05 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2759)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1644ms (Views: 1639.6ms | ActiveRecord: 1.2ms | Allocations: 22784)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1720ms (Views: 1717.8ms | ActiveRecord: 0.6ms | Allocations: 14211)
+
+
+Started GET "/posts/4" for ::1 at 2019-11-11 12:33:08 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 314)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 1457ms (Views: 1454.9ms | ActiveRecord: 0.3ms | Allocations: 10401)
+
+
