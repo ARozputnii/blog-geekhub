@@ -11084,3 +11084,66 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 1418ms (Views: 1416.4ms | ActiveRecord: 0.4ms | Allocations: 11657)
 
 
+Started GET "/" for ::1 at 2019-11-13 21:47:32 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 5494)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/andriy/Рабочий стол/geekhub/homework/blog-geekhub/public/packs
+Completed 200 OK in 2312ms (Views: 2296.4ms | ActiveRecord: 7.0ms | Allocations: 44496)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-13 21:47:37 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 9.9ms | Allocations: 3027)
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 3344)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 12624)
+
+
+Started GET "/posts" for ::1 at 2019-11-13 21:47:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1020)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.6ms | Allocations: 10128)
+
+
+Started GET "/posts/2" for ::1 at 2019-11-13 21:47:48 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 324)
+Completed 200 OK in 64ms (Views: 21.6ms | ActiveRecord: 0.9ms | Allocations: 12188)
+
+
+Started DELETE "/posts/2" for ::1 at 2019-11-13 21:47:50 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bLjGQuYxkEiD0BZowhAJs7FZgpxY+smlfX9HWAPG9ATlYGnsHtG1KBs33qu4RW9SN+xgLsW/DFygPLWok1U8mw==", "id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms | Allocations: 2692)
+
+
+Started GET "/posts" for ::1 at 2019-11-13 21:47:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 948)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 10061)
+
+
