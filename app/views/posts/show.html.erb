@@ -1,8 +1,8 @@
 
 
 <div class="show">
-<p class="label_show">Name:</p>
-  <div><%= @post.name %></div>
+<p class="label_show">Author:</p>
+  <div><%= @post.author.first_name %> <%= @post.author.last_name %></div>
 </div>
 <div class="show">
   <p class="label_show">Title:</p>
@@ -15,3 +15,10 @@
 </div>
 <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-success" %>
 <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-success" %>
+
+
+<h2>Comments</h2>
+<%= render @post.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>

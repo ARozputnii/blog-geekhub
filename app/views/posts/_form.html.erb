@@ -12,9 +12,9 @@
   <% end %>
 
   <div class="form-group row">
-    <%= form.label :name, class:"col-sm-2 col-form-label"%>
+    <%= form.label :author, class:"col-sm-2 col-form-label"%>
     <div class="col-sm-10">
-      <%= form.text_field :name, class:"form-control" %>
+      <%= form.collection_select(:author_id, Author.all, :id, :full_name) %>
     </div>
   </div>
 

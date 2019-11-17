@@ -1,5 +1,5 @@
 class Posts < ActiveRecord::Migration[6.0]
   def change
-    add_reference :authors, foreign_key: true
+    add_reference :posts, :author
   end
 end
