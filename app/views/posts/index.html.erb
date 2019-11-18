@@ -17,7 +17,7 @@
       <div class="card-body" style="background: #b6dbd4">
         <blockquote class="blockquote mb-0">
           <p><%= post.content %></p>
-          <footer class="blockquote-footer">author: <cite title="Source Title"><%= post.author.full_name %></cite></footer>
+          <footer class="blockquote-footer">author: <cite title="Source Title"><%= post.author.full_name %><p style="font-size: 13px"><%= post.created_at.to_date.strftime("%d %B, %Y") %></p></cite></footer>
         </blockquote>
         <%= link_to 'Show', post, class:"btn btn-outline-success" %> 
       </div>

@@ -1,17 +1,18 @@
 
-<% @post.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-  <p>
-    <%= link_to 'Destroy Comment', [comment.post, comment],
+<% @post.comments.each do |comment| %>
+  <br><br>
+  <div class="card">
+    <div class="card-header">
+      Name: <%= comment.commenter %>  
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= comment.body %></p>
+      <p class="blockquote-footer"><%= comment.created_at.to_date.strftime("%d %B, %Y") %></p>
+      <%= link_to 'Destroy Comment', [comment.post, comment],
                 method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-  </p>
+                data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%> 
+    </div>
+
+  </div>
 <% end %>
