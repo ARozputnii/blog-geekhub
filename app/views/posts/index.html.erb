@@ -4,8 +4,8 @@
   <div class="titles">
     Welcome to Our Blog!
   </div>
-  <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %>
-</div>
+    <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
+  </div>
 
 <div class="post_index">
   <% @posts.each do |post| %>
@@ -16,9 +16,21 @@
       </div>
       <div class="card-body" style="background: #b6dbd4">
         <blockquote class="blockquote mb-0">
-          <p><%= post.content %></p>
-          <footer class="blockquote-footer">author: <cite title="Source Title"><%= post.author.full_name %><p style="font-size: 13px"><%= post.created_at.to_date.strftime("%d %B, %Y") %></p></cite></footer>
+
+            <div class="row">
+              <div class="col-8">
+                <p><%=h truncate(post.content, :length => 300 ) %></p>
+                <footer class="blockquote-footer">author: <cite title="Source Title"><%= full_name(post) %><p style="font-size: 13px"><%= post.created_at.to_date.strftime("%d %B, %Y") %></p></cite></footer>
+              </div>
+              <div class="col-4">
+                <% if post.image.attached? %>
+                  <!-- @post.image.present? will always return true, use attached? to check presence -->
+                    <%= image_tag post.image ,size: "350x350"%>
+                <% end %>
+              </div>
+            </div>
         </blockquote>
+          
         <%= link_to 'Show', post, class:"btn btn-outline-success" %> 
       </div>
     </div>

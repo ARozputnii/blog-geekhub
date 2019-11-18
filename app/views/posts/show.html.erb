@@ -1,9 +1,12 @@
 <div class="card mb-3, show">
-  <img src="..." class="card-img-top" alt="...">
+  <% if @post.image.attached? %>
+	<!-- @post.image.present? will always return true, use attached? to check presence -->
+	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px",  class: "mx-auto d-block"%>
+	<% end %>
   <div class="card-body">
     <h5 class="card-title"> <%= @post.title %> </h5>
     <p class="card-text"> <%= @post.content %> </p>
-      <p class="blockquote-footer">author: <%= @post.author.full_name %></p>
+      <p class="blockquote-footer">author: <%= full_name(@post) %></p>
       <p class="blockquote-footer"><%= @post.created_at.to_date.strftime("%d %B, %Y") %></p>
   </div>
 </div>
