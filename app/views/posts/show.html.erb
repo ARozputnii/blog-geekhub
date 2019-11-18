@@ -6,7 +6,7 @@
   <div class="card-body">
     <h5 class="card-title"> <%= @post.title %> </h5>
     <p class="card-text"> <%= @post.content %> </p>
-      <p class="blockquote-footer"><%= @post.created_at.to_date.strftime("%d %B, %Y") %>. author: <%= full_name(@post) %></p>
+      <p class="blockquote-footer"><%= @post.created_at.to_date.strftime("%d %B, %Y") %>author: <%= full_name(@post) %></p>
       <p class="blockquote-footer" style="font-size: 13px">views: <%= @post.impressionist_count(:filter=>:ip_address) %></p>
   </div>
 </div>

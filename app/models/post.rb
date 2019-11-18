@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 	validates :title,  length: { minimum: 6 }
 	validates :content, length: { minimum: 10 }
 
-	belongs_to :author, counter_cache: true
+	belongs_to :author
 	has_many :comments, dependent: :destroy
   has_one_attached :image
   is_impressionable
