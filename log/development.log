@@ -44948,3 +44948,586 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 698)
 
 
+Started GET "/posts" for ::1 at 2019-11-19 09:56:04 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 258.1ms | Allocations: 61003)
+Completed 200 OK in 329ms (Views: 293.0ms | ActiveRecord: 23.8ms | Allocations: 90603)
+
+
+Started GET "/packs/js/application-5d26f2de73cca49a6b7f.js" for ::1 at 2019-11-19 09:56:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-5d26f2de73cca49a6b7f.js"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9a42b4605374b0b9013c95a3af8f12feb27b4211/23-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2375822966f95176571e1fdcf5526cf41224ffac/1556945364_1.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9a42b4605374b0b9013c95a3af8f12feb27b4211", "filename"=>"23-14"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2375822966f95176571e1fdcf5526cf41224ffac", "filename"=>"1556945364_1"}
+  [1m[36mActiveStorage::Blob Load (7.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (94.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[36m  Disk Storage (113.9ms) [0m[34mGenerated URL for file at key: lj98eovqw867ysthm9rn88s0n9qu (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: t0f7wd3ne0k0o5c8bqsb253qcgqi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg)[0m
+Completed 302 Found in 135ms (ActiveRecord: 10.4ms | Allocations: 190091)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg
+Completed 302 Found in 143ms (ActiveRecord: 102.3ms | Allocations: 193456)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af5c3b19ee3586b3e0997622c3b2ba4d17553103/1556945364_1.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d546b6acab28f2fc22a205d1fc4435636dd95064/23-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2402d3495dc9e05643b131f840b8e451ea58066e/23-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af5c3b19ee3586b3e0997622c3b2ba4d17553103", "filename"=>"1556945364_1"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2b420891f13e0cbe4bc40383cea853621e45a25/23-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+  [1m[36mActiveStorage::Blob Load (7.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: e4xub5dtymz7dwi2bo5hqkmxecc9 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg)[0m
+Processing by ActiveStorage::BlobsController#show as JPEG
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab", "filename"=>"23-14"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d546b6acab28f2fc22a205d1fc4435636dd95064", "filename"=>"23-14"}
+Completed 302 Found in 22ms (ActiveRecord: 7.4ms | Allocations: 5481)
+
+
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1307)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (2.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 5ek9km4e66m0t4sl5uuz3rllifwe (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2402d3495dc9e05643b131f840b8e451ea58066e", "filename"=>"23-14"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms | Allocations: 4927)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d41404f192cd6be1d37734c79c0dae1192e4609/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d41404f192cd6be1d37734c79c0dae1192e4609", "filename"=>"Снимок экрана от 2019-11-11 19-39-05"}
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: dvajokqa0482m55m9he71a0cuyf6 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2b420891f13e0cbe4bc40383cea853621e45a25", "filename"=>"23-14"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Completed 302 Found in 30ms (ActiveRecord: 5.7ms | Allocations: 9006)
+
+
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: ql7f5mlua1basae9dcc90d4c8g1o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F+%253F%253F%253F%253F%253F%253F+%253F%253F+2019-11-11+19-39-05.png%22%3B+filename%2A%3DUTF-8%27%27%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA%2520%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0%2520%25D0%25BE%25D1%2582%25202019-11-11%252019-39-05.png)[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F+%253F%253F%253F%253F%253F%253F+%253F%253F+2019-11-11+19-39-05.png%22%3B+filename%2A%3DUTF-8%27%27%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA%2520%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0%2520%25D0%25BE%25D1%2582%25202019-11-11%252019-39-05.png
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1556945364_1.jpg\"; filename*=UTF-8''1556945364_1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe", "filename"=>"1556945364_1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 398)
+
+
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms | Allocations: 7603)
+
+
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: p5p1ts3nipeofj9eyumjjp20tgnt (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg
+Completed 302 Found in 24ms (ActiveRecord: 4.8ms | Allocations: 5806)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698", "filename"=>"23-14"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 696)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc", "filename"=>"23-14"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1556945364_1.jpg\"; filename*=UTF-8''1556945364_1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609", "filename"=>"1556945364_1"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 926)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1285)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F+%253F%253F%253F%253F%253F%253F+%253F%253F+2019-11-11+19-39-05.png%22%3B+filename%2A%3DUTF-8%27%27%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA%2520%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0%2520%25D0%25BE%25D1%2582%25202019-11-11%252019-39-05.png" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F%3F %3F%3F%3F%3F%3F%3F %3F%3F 2019-11-11 19-39-05.png\"; filename*=UTF-8''%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d", "filename"=>"Снимок экрана от 2019-11-11 19-39-05"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 703)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:05 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658", "filename"=>"23-14"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 694)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-19 09:56:08 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/posts/_form.html.erb:19
+  Rendered posts/_form.html.erb (Duration: 21.1ms | Allocations: 3301)
+  Rendered posts/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 3608)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 1.9ms | Allocations: 12973)
+
+
+Started GET "/packs/js/application-5d26f2de73cca49a6b7f.js" for ::1 at 2019-11-19 09:56:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-5d26f2de73cca49a6b7f.js"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/posts" for ::1 at 2019-11-19 09:56:49 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"qZ1S2BlAR99Nwl5UFQzDHM9os4HrV/fzSLRn6hEIrXL4c4rQzuPKaoud21BtX3eBjQ3nHvDlGfpfMJCoBnpASQ==", "post"=>{"author_id"=>"1", "title"=>"it woth", "content"=>"# config/database.yml\r\nproduction:\r\n  <<: *default\r\n  adapter: postgresql\r\n  encoding: unicode\r\n  database: myapp_production\r\n  username: myapp\r\n  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f2e04a805f0 @tempfile=#<Tempfile:/tmp/RackMultipart20191119-15174-1rlxxzu.jpg>, @original_filename="gandex.ru-18509_8691_-16489.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"gandex.ru-18509_8691_-16489.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "it woth"], ["content", "# config/database.yml\r\nproduction:\r\n  <<: *default\r\n  adapter: postgresql\r\n  encoding: unicode\r\n  database: myapp_production\r\n  username: myapp\r\n  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>"], ["created_at", "2019-11-19 07:56:49.459195"], ["updated_at", "2019-11-19 07:56:49.459195"], ["author_id", 1]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "nslaghhvwmbsierp2fongpe9y29p"], ["filename", "gandex.ru-18509_8691_-16489.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 274662], ["checksum", "WOrjwh3yvrW5zITzIEaX1Q=="], ["created_at", "2019-11-19 07:56:49.478880"]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (1.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Post"], ["record_id", 23], ["blob_id", 10], ["created_at", "2019-11-19 07:56:49.481732"]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1 WHERE "posts"."id" = $2[0m  [["updated_at", "2019-11-19 07:56:49.484737"], ["id", 23]]
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:31:in `block in create'
+[36m  Disk Storage (2.0ms) [0m[32mUploaded file to key: nslaghhvwmbsierp2fongpe9y29p (checksum: WOrjwh3yvrW5zITzIEaX1Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 22102c43-8d9f-48bc-8583-d9affa24e617) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f2e05460b10 @uri=#<URI::GID gid://blog-geekhub/ActiveStorage::Blob/10>>
+Redirected to http://localhost:3000/posts/23
+Completed 302 Found in 47ms (ActiveRecord: 5.9ms | Allocations: 37219)
+
+
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617] Performing ActiveStorage::AnalyzeJob (Job ID: 22102c43-8d9f-48bc-8583-d9affa24e617) from Async(active_storage_analysis) enqueued at 2019-11-19T07:56:49Z with arguments: #<GlobalID:0x00007f2de0039ac0 @uri=#<URI::GID gid://blog-geekhub/ActiveStorage::Blob/10>>
+Started GET "/posts/23" for ::1 at 2019-11-19 09:56:49 +0200
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617] [36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: nslaghhvwmbsierp2fongpe9y29p[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"23"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617]   [1m[36mActiveStorage::Blob Update (1.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 10]]
+DEPRECATION WARNING: ActionDispatch::Http::ParameterFilter is deprecated and will be removed from Rails 6.1. Use ActiveSupport::ParameterFilter instead. (called from associative_create_statement at /home/andriy/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/impressionist-1.6.1/app/controllers/impressionist_controller.rb:54)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617]   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [22102c43-8d9f-48bc-8583-d9affa24e617] Performed ActiveStorage::AnalyzeJob (Job ID: 22102c43-8d9f-48bc-8583-d9affa24e617) from Async(active_storage_analysis) in 15.78ms
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["impressionable_type", "Post"], ["impressionable_id", 23], ["controller_name", "posts"], ["action_name", "show"], ["request_hash", "c4c1d283fa23c037a4567c9462415a124a5d74beccd47cfa308b14f824358f70"], ["ip_address", "::1"], ["session_hash", "843a20bd9058697db07b466e0a009310"], ["referrer", "http://localhost:3000/posts/new?"], ["created_at", "2019-11-19 07:56:49.554352"], ["updated_at", "2019-11-19 07:56:49.554352"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActionDispatch::Http::ParameterFilter is deprecated and will be removed from Rails 6.1. Use ActiveSupport::ParameterFilter instead. (called from show at /home/andriy/Рабочий стол/geekhub/homework/blog-geekhub/app/controllers/posts_controller.rb:13)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:13:in `show'
+  [1m[36mImpression Create (0.5ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["impressionable_type", "Post"], ["impressionable_id", 23], ["controller_name", "posts"], ["action_name", "show"], ["request_hash", "c4c1d283fa23c037a4567c9462415a124a5d74beccd47cfa308b14f824358f70"], ["ip_address", "::1"], ["session_hash", "843a20bd9058697db07b466e0a009310"], ["referrer", "http://localhost:3000/posts/new?"], ["created_at", "2019-11-19 07:56:49.563121"], ["updated_at", "2019-11-19 07:56:49.563121"]]
+  ↳ app/controllers/posts_controller.rb:13:in `show'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:13:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."ip_address") FROM "impressions" WHERE "impressions"."impressionable_id" = $1 AND "impressions"."impressionable_type" = $2[0m  [["impressionable_id", 23], ["impressionable_type", "Post"]]
+  ↳ app/views/posts/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 23]]
+  ↳ app/views/posts/show.html.erb:17
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 9.4ms | Allocations: 5273)
+  Rendered posts/show.html.erb within layouts/application (Duration: 26.4ms | Allocations: 11907)
+Completed 200 OK in 92ms (Views: 28.7ms | ActiveRecord: 15.3ms | Allocations: 43529)
+
+
+Started GET "/packs/js/application-5d26f2de73cca49a6b7f.js" for ::1 at 2019-11-19 09:56:49 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18cdbda1071885ce4c99139d153153a00d6d41a4/gandex.ru-18509_8691_-16489.jpg" for ::1 at 2019-11-19 09:56:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-5d26f2de73cca49a6b7f.js"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18cdbda1071885ce4c99139d153153a00d6d41a4", "filename"=>"gandex.ru-18509_8691_-16489"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: nslaghhvwmbsierp2fongpe9y29p (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d/gandex.ru-18509_8691_-16489.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22gandex.ru-18509_8691_-16489.jpg%22%3B+filename%2A%3DUTF-8%27%27gandex.ru-18509_8691_-16489.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d/gandex.ru-18509_8691_-16489.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22gandex.ru-18509_8691_-16489.jpg%22%3B+filename%2A%3DUTF-8%27%27gandex.ru-18509_8691_-16489.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 2296)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d/gandex.ru-18509_8691_-16489.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22gandex.ru-18509_8691_-16489.jpg%22%3B+filename%2A%3DUTF-8%27%27gandex.ru-18509_8691_-16489.jpg" for ::1 at 2019-11-19 09:56:49 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"gandex.ru-18509_8691_-16489.jpg\"; filename*=UTF-8''gandex.ru-18509_8691_-16489.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d", "filename"=>"gandex.ru-18509_8691_-16489"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 469)
+
+
+Started GET "/posts" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:28
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/posts_helper.rb:3:in `full_name'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 87.0ms | Allocations: 35339)
+Completed 200 OK in 98ms (Views: 83.3ms | ActiveRecord: 12.3ms | Allocations: 44547)
+
+
+Started GET "/packs/js/application-5d26f2de73cca49a6b7f.js" for ::1 at 2019-11-19 09:56:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-5d26f2de73cca49a6b7f.js"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d/gandex.ru-18509_8691_-16489.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22gandex.ru-18509_8691_-16489.jpg%22%3B+filename%2A%3DUTF-8%27%27gandex.ru-18509_8691_-16489.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1556945364_1.jpg\"; filename*=UTF-8''1556945364_1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiR281T0dWdmRuRjNPRFkzZVhOMGFHMDVjbTQ0T0hNd2JqbHhkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yNDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe7367dab0bf2b7a6d6c4264f2f04d139c8fadbe", "filename"=>"1556945364_1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 395)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"gandex.ru-18509_8691_-16489.jpg\"; filename*=UTF-8''gandex.ru-18509_8691_-16489.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhibk5zWVdkb2FIWjNiV0p6YVdWeWNESm1iMjVuY0dVNWVUSTVjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1kaGJtUmxlQzV5ZFMweE9EVXdPVjg0TmpreFh5MHhOalE0T1M1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmRoYm1SbGVDNXlkUzB4T0RVd09WODROamt4WHkweE5qUTRPUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6NDkuNjY2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab4cd646e16e19d7d3464b0c1281b77425ecc96d", "filename"=>"gandex.ru-18509_8691_-16489"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 476)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjRFZ3TVhSek0yNXBjR1Z2Wm1vNVpYbDFiV3BxY0RJd2RHZHVkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--55f7a4350136c7e566e0751e13411dea8828b658", "filename"=>"23-14"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkREJtTjNka00yNWxNR3N3YnpWak9HSnhjMkl5TlROeFkyZHhhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--a96b99c2284e29ee8336062a64b5bedec25d78ab", "filename"=>"23-14"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 700)
+
+
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1496)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609/1556945364_1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221556945364_1.jpg%22%3B+filename%2A%3DUTF-8%27%271556945364_1.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1556945364_1.jpg\"; filename*=UTF-8''1556945364_1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaVFI0ZFdJMVpIUjViWG8zWkhkcE1tSnZOV2h4YTIxNFpXTmpPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFMU5UWTVORFV6TmpSZk1TNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpFMU5UWTVORFV6TmpSZk1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4yODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3ae1e273ff03fb101064ab61720ca08e3294609", "filename"=>"1556945364_1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1098)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOV1ZyT1d0dE5HVTJObTB3ZERSemJEVjFkWG96Y214c2FXWjNaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzE3WiIsInB1ciI6ImJsb2Jfa2V5In19--1c6eced0d5dadb9feaaaa024e4974d1234ebb698", "filename"=>"23-14"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 693)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc/23-14.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2223-14.jpg%22%3B+filename%2A%3DUTF-8%27%2723-14.jpg" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"23-14.jpg\"; filename*=UTF-8''23-14.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaSFpoYW05cmNXRXdORGd5YlRVMWJUbG9aVGN4WVRCamRYbG1OZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJekxURTBMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1qTXRNVFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMTktMTEtMTlUMDg6MDE6MDUuMzM4WiIsInB1ciI6ImJsb2Jfa2V5In19--2b3fc916bcd5e0b6d7445206135f34b7eb468cbc", "filename"=>"23-14"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 695)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F%253F+%253F%253F%253F%253F%253F%253F+%253F%253F+2019-11-11+19-39-05.png%22%3B+filename%2A%3DUTF-8%27%27%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA%2520%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0%2520%25D0%25BE%25D1%2582%25202019-11-11%252019-39-05.png" for ::1 at 2019-11-19 09:56:52 +0200
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F%3F %3F%3F%3F%3F%3F%3F %3F%3F 2019-11-11 19-39-05.png\"; filename*=UTF-8''%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202019-11-11%2019-39-05.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV3czWmpWdGJIVmhNV0poYzJGbE9XUmpZemt3WkRSak9HY3hid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWVCcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lDVXpSaVV6UmlBeU1ERTVMVEV4TFRFeElERTVMVE01TFRBMUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVRd0pVRXhKVVF3SlVKRUpVUXdKVUk0SlVRd0pVSkRKVVF3SlVKRkpVUXdKVUpCSlRJd0pVUXhKVGhFSlVRd0pVSkJKVVF4SlRnd0pVUXdKVUl3SlVRd0pVSkVKVVF3SlVJd0pUSXdKVVF3SlVKRkpVUXhKVGd5SlRJd01qQXhPUzB4TVMweE1TVXlNREU1TFRNNUxUQTFMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraURtbHRZV2RsTDNCdVp3WTdCbFE9IiwiZXhwIjoiMjAxOS0xMS0xOVQwODowMTowNS4zNDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c231b64c58d8ab41befcda74091b90e99986fd0d", "filename"=>"Снимок экрана от 2019-11-11 19-39-05"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 699)
+
+
