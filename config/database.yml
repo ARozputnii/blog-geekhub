@@ -10,7 +10,7 @@ default: &default
 development:
   <<: *default
   database: blog-geekhub_development
-  username: andrii
+  username: <%= ENV['blog-geekhub_DATABASE_NAME'] %>
   password: <%= ENV['blog-geekhub_DATABASE_PASSWORD'] %>
   encoding: unicode
   host: localhost
@@ -19,7 +19,7 @@ development:
 test:
   <<: *default
   database: blog-geekhub_test
-  username: andrii
+  username: <%= ENV['blog-geekhub_DATABASE_NAME'] %>
   password: <%= ENV['blog-geekhub_DATABASE_PASSWORD'] %>
   encoding: unicode
   host: localhost
@@ -28,5 +28,5 @@ test:
 production:
   <<: *default
   database: blog-geekhub_production
-  username: blog-geekhub
+  username: <%= ENV['blog-geekhub_DATABASE_NAME'] %>
   password: <%= ENV['blog-geekhub_DATABASE_PASSWORD'] %>
