@@ -1,5 +1,3 @@
-
-
 <% @post.comments.each do |comment| %>
   <br><br>
   <div class="card">
@@ -13,6 +11,5 @@
                 method: :delete,
                 data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%> 
     </div>
-
   </div>
 <% end %>

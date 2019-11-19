@@ -156,6 +156,8 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    robocop (0.1.1)
+      rack
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
     sass-rails (6.0.0)
@@ -225,6 +227,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.1)
+  robocop (~> 0.1.1)
   sass-rails (>= 6)
   selenium-webdriver
   spring

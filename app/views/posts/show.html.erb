@@ -1,7 +1,7 @@
 <div class="card mb-3, show">
   <% if @post.image.attached? %>
 	<!-- @post.image.present? will always return true, use attached? to check presence -->
-	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px",  class: "mx-auto d-block"%>
+	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px",  class: "mx-auto d-block" if @post.image.attached? %> 
 	<% end %>
   <div class="card-body">
     <h5 class="card-title"> <%= @post.title %> </h5>
