@@ -20,7 +20,7 @@
             <div class="row">
               <div class="col-8">
                 <p><%=h truncate(post.content, :length => 300 ) %></p>
-                <footer class="blockquote-footer">author: <cite title="Source Title"><%= full_name(post) %><p style="font-size: 13px"><%= post.created_at.to_date.strftime("%d %B, %Y") %></p></cite></footer>
+                <footer class="blockquote-footer">author: <cite title="Source Title"><%= full_name(post) %><p style="font-size: 13px"><%= fa_icon "calendar" %> <%= post.created_at.to_date.strftime("%d %B, %Y") %></p></cite></footer>
               </div>
               <div class="col-4">
                 <% if post.image.attached? %>
