@@ -2,14 +2,18 @@
   <br><br>
   <div class="card">
     <div class="card-header">
-      Name: <%= comment.commenter %>  
+      Name: <%= full_name(@post) %>
     </div>
     <div class="card-body">
       <p class="card-text"><%= comment.body %></p>
       <p class="blockquote-footer"><%= comment.created_at.to_date.strftime("%d %B, %Y") %></p>
-      <%= link_to 'Destroy Comment', [comment.post, comment],
+      <% if current_user %>
+        <% if @post.author_id == @current_user.id  %>
+          <%= link_to 'Destroy Comment', [comment.post, comment],
                 method: :delete,
-                data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%> 
+                data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%>
+        <% end %>
+      <% end  %>
     </div>
   </div>
 <% end %>

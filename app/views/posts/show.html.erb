@@ -11,9 +11,14 @@
       <p class="blockquote-footer" style="font-size: 13px"> <%= fa_icon "eye" %> <%= @post.impressionist_count(:filter=>:ip_address) %></p>
   </div>
 </div>
-<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-outline-success" %>
-<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-outline-success" %>
+  <% if current_user %>
+    <% if @post.author_id == @current_user.id  %>
+      <%= link_to 'Edit', edit_post_path(@post), class:'btn btn-outline-success' %>
+      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-success' %>
+    <% end  %>
+  <% end  %>
 
 
 <%= render @post.comments %>
+<br>
 <%= render 'comments/form' %>

@@ -1,21 +1,21 @@
 <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
-  <div class="form-group row">
-    <%= form.label :commenter, class:"col-sm-2 col-form-label" %>
-    <div class="col-sm-10">
-      <%= form.text_field :commenter, class:"form-control" %>
-    </div>
-  </div>
 
-  <div class="form-group row">
-    <%= form.label :body, class:"col-sm-2 col-form-label" %>
-    <div class="col-sm-10">
-      <%= form.text_area :body, class:"form-control" %>
-    </div>
-  </div>
+  <% if current_user %>
+    <% if @post.author_id == @current_user.id  %>
+      <div class="form-group row">
+        <%= form.label :body,"Add comment", class:"col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= form.text_area :body, class:"form-control" %>
+        </div>
+      </div>
 
-  <div class="actions">
-    <%= form.submit  class:"btn btn-outline-success" %>
-  </div>
+      <div class="actions">
+        <%= form.submit  class:"btn btn-outline-success" %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to "log in to add a comment", login_path, class:"blockquote-footer" %>
+  <% end  %>
 <% end %>
 
 
