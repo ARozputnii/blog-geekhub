@@ -17,13 +17,20 @@
         <%= link_to 'Home', posts_path, class:"navbar-brand" %>
         </div>
         <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active navbar-brand" href="#">Sing in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navbar-brand" href="#">Sing up</a>
-          </li>
+          <% if current_user %>
+
+            <%= link_to "#{current_user.full_name}", @author, class:"navbar-brand" %>
+            <li class="nav-item">
+              <%= link_to 'Log Out', logout_path, class:"navbar-brand" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Sign Up', signup_path, class:"navbar-brand" %>
+              <%= link_to 'Log In', login_path, class:"navbar-brand" %>
+            </li>
+          <% end %>
         </ul>
+
       </nav>
         <%= yield %>
     </div>
