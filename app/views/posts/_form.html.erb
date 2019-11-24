@@ -12,13 +12,7 @@
       </ul>
     </div>
   <% end %>
-  
-  <div class="form-group row" style="margin-left: 30px;">
-    <%= form.label :author, class:"col-sm-2 col-form-label"%>
-    <div class="col-sm-8">
-      <%= form.collection_select(:author_id, Author.all, :id, :full_name, {}, class: "form-control")%>
-    </div>
-  </div>
+
 
   <div class="form-group row" style="margin-left: 30px;">
     <%= form.label :title, class:"col-sm-2 col-form-label" %>
