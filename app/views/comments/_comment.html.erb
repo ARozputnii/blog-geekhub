@@ -2,17 +2,26 @@
   <br><br>
   <div class="card">
     <div class="card-header">
+      <% if updated(comment) %>
+        <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
+      <% end  %>
       Author: <%= full_name(@post) %>
     </div>
     <div class="card-body">
-      <p class="card-text"><%= comment.body %></p>
-      <p class="blockquote-footer"><%= fa_icon "calendar" %>   <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
       <% if current_user %>
         <% if @post.author_id == @current_user.id  %>
-          <%= link_to 'Edit',  edit_post_comment_path(@post, comment), class:'btn btn-outline-success' %>
-          <%= link_to 'Destroy Comment', [comment.post, comment],
+
+          <p class="card-text"><%= comment.body %>
+          <p class="blockquote-footer"><%= fa_icon "calendar" %>   <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
+
+          <% if (@current_user.id == comment.post.author_id && Time.now - comment.created_at < 3600) %>
+
+            <%= link_to 'Edit',  edit_post_comment_path(@post, comment), class:'btn btn-outline-success' %>
+            <%= link_to 'Destroy Comment', [comment.post, comment],
                 method: :delete,
                 data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%>
+
+          <% end %>
         <% end %>
       <% end  %>
     </div>
