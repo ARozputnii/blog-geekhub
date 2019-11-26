@@ -10,11 +10,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # checking logged or not
   def require_login
     redirect_to login_path unless logged_in?
-    # add some flash mess, dont forget
-    # ###############
+
   end
 
   def login_in(author)
@@ -25,7 +23,6 @@ class ApplicationController < ActionController::Base
     !current_user.nil?
   end
 
-  # offer to sing up/log in
   def unloged
     cookies[:actions] = if cookies[:actions]
                           cookies[:actions].to_i + 1
