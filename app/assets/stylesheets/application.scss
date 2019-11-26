@@ -9,14 +9,16 @@
 	text-align: center;
 	background: url(https://www.groovypost.com/wp-content/uploads/2012/06/notepad-featured.jpg) no-repeat center top / cover ;
 }
-
+.titles p{
+  padding-top: 30px;
+}
 .button_new_post {
 	text-decoration: none;
 	outline: none;
 	display: inline-block;
 	color: white;
 	padding: 10px 20px;
-	margin: 10px 20px;
+	margin: 25px 20px;
 	border-radius: 10px;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;

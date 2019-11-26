@@ -43,11 +43,9 @@ ActiveRecord::Schema.define(version: 2019_11_23_154143) do
     t.string "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "{:foreign_key=>true}_id"
     t.string "email"
     t.string "password_digest"
     t.index ["email"], name: "index_authors_on_email", unique: true
-    t.index ["{:foreign_key=>true}_id"], name: "index_authors_on_{:foreign_key=>true}_id"
   end
 
   create_table "comments", force: :cascade do |t|

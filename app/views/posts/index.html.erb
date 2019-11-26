@@ -2,21 +2,26 @@
 
 <div class="titles">
   <div class="titles">
-    Welcome to Our Blog!
+    <p>Welcome to Our Blog!</p>
   </div>
     <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
   </div>
 
 <div class="post_index">
+
+  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Posts", :class =>"col-sm-2 col-form-label" %>
+    <%= submit_tag "Search", :class => "btn btn-outline-success"%>
+  <% end %>
+
   <% @posts.each do |post| %>
     <br>
     <div class="card">
       <div class="card-header">
-       <%= post.title %>
+        <%= post.title %>
       </div>
       <div class="card-body" style="background: #b6dbd4">
         <blockquote class="blockquote mb-0">
-
             <div class="row">
               <div class="col-8">
                 <p><%=h truncate(post.content, :length => 300 ) %></p>
@@ -30,7 +35,6 @@
               </div>
             </div>
         </blockquote>
-          
         <%= link_to 'Show', post, class:"btn btn-outline-success" %> 
       </div>
     </div>
