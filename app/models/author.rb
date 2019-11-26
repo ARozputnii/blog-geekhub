@@ -2,7 +2,7 @@ class Author < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   def full_name
-    "#{first_name} #{last_name}"
+    "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
   has_secure_password
