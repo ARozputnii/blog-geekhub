@@ -5,17 +5,17 @@
       <% if updated(comment) %>
         <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
       <% end  %>
-      Author: <%= full_name(@post) %>
+      <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
+                Author: <%= full_name(@post) %>
+            </span>
     </div>
     <div class="card-body">
       <% if current_user %>
         <% if @post.author_id == @current_user.id  %>
 
           <p class="card-text"><%= comment.body %>
-          <p class="blockquote-footer"><%= fa_icon "calendar" %>   <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
-
           <% if (@current_user.id == comment.post.author_id && Time.now - comment.created_at < 3600) %>
-
+            <br><br>
             <%= link_to 'Edit',  edit_post_comment_path(@post, comment), class:'btn btn-outline-success' %>
             <%= link_to 'Destroy Comment', [comment.post, comment],
                 method: :delete,
