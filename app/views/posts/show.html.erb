@@ -10,7 +10,7 @@
       <p class="blockquote-footer" style="font-size: 13px">
         <span data-toggle="tooltip" data-placement="top" title="(<%= @post.created_at %>)">
           <%= fa_icon "calendar" %> <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
-          <%= fa_icon "eye" %><%= @post.impressionist_count(:filter=>:ip_address) %>
+          <%= fa_icon "eye", style: "margin: 0 10px" %><%= @post.impressionist_count(:filter=>:ip_address) %>
         </span>
       </p>
 
