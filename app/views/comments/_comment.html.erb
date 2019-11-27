@@ -6,7 +6,7 @@
         <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
       <% end  %>
       <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
-                Author: <%= full_name(@post) %>
+        <%= full_name(@post) %>
             </span>
     </div>
     <div class="card-body">

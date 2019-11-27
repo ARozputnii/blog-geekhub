@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    # seach in db/ else Poast.all
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC")
     else
@@ -12,9 +12,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
   def show
+    #counter
     impressionist(@post)
   end
 
@@ -26,17 +25,12 @@ class PostsController < ApplicationController
       redirect_to login_path
     end
   end
-
   # GET /posts/1/edit
   def edit
   end
-
   # POST /posts
-  # POST /posts.json
   def create
-
       @post = current_user.posts.build(post_params)
-
       respond_to do |format|
         if @post.save
           format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -46,11 +40,9 @@ class PostsController < ApplicationController
           format.json { render json: @post.errors, status: :unprocessable_entity }
         end
       end
-
   end
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     if owner == false
       redirect_to root_path
@@ -65,9 +57,7 @@ class PostsController < ApplicationController
       end
     end
   end
-
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|
@@ -82,7 +72,7 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-        # checking owner or not
+        # checking autorithations user or not
     def owner
       if @post.author_id == @current_user.id
       else
