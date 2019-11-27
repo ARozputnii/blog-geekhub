@@ -1,7 +1,7 @@
 <div class="card mb-3, show">
   <% if @post.image.attached? %>
 	<!-- @post.image.present? will always return true, use attached? to check presence -->
-	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px; margin: 5% 0 0 0",  class: "mx-auto d-block" if @post.image.attached? %>
+	    <%= image_tag @post.image ,alt: 'https://cs8.pikabu.ru/post_img/big/2016/02/04/7/145458292112119207.jpg', style:"height: 500px; margin: 5% 0 0 0",  class: "mx-auto d-block" if @post.image.attached? %>
   <% else %>
     <%= image_tag("https://cs8.pikabu.ru/post_img/big/2016/02/04/7/145458292112119207.jpg", {:style => "width: 500px; margin: 3% auto"}) %>
   <% end %>
