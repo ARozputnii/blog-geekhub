@@ -1,14 +1,19 @@
 <div class="card mb-3, show">
   <% if @post.image.attached? %>
 	<!-- @post.image.present? will always return true, use attached? to check presence -->
-	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px",  class: "mx-auto d-block" if @post.image.attached? %> 
+	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px; margin: 5% 0 0 0",  class: "mx-auto d-block" if @post.image.attached? %>
 	<% end %>
   <div class="card-body">
     <h5 class="card-title"> <%= @post.title %> </h5>
     <p class="card-text"> <%= @post.content %> </p>
       <p class="blockquote-footer">author: <%= full_name(@post) %></p>
-      <p class="blockquote-footer"><%= fa_icon "calendar" %>  <%= @post.created_at.to_date.strftime("%d %B, %Y") %></p>
-      <p class="blockquote-footer" style="font-size: 13px"> <%= fa_icon "eye" %> <%= @post.impressionist_count(:filter=>:ip_address) %></p>
+      <p class="blockquote-footer" style="font-size: 13px">
+        <span data-toggle="tooltip" data-placement="top" title="(<%= @post.created_at %>)">
+          <%= fa_icon "calendar" %> <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
+          <%= fa_icon "eye" %><%= @post.impressionist_count(:filter=>:ip_address) %>
+        </span>
+      </p>
+
   </div>
 </div>
   <% if current_user %>
