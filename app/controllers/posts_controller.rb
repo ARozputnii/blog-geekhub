@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC")
     else
-      @posts = Post.all.order('created_at DESC')
+      @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
     end
   end
 

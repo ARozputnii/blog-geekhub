@@ -43,5 +43,4 @@
     </div>
   <% end %>
 </div>
-
- 
+<%= will_paginate(@posts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination-sm ', style:'margin-left: 35%') %>

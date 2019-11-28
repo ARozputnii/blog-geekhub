@@ -60,3 +60,4 @@ gem 'robocop', '~> 0.1.1'
 gem "figaro" # password to database
 gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+gem 'bootstrap-will_paginate'
