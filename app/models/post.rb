@@ -1,7 +1,10 @@
 class Post < ApplicationRecord
-	validates :title, :content, presence: :true
-	validates :title,  length: { minimum: 6 }
-	validates :content, length: { minimum: 10 }
+
+	validates :author_id, presence: true
+	validates :title, :content, presence: true,
+						length: { minimum: 5 }
+
+
 
 	belongs_to :author
 	has_many :comments, dependent: :destroy

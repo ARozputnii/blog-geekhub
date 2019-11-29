@@ -5,7 +5,14 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    @comment.author_id = current_user.id
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+      else
+        format.html { redirect_to @post, alert: 'Smth went wrong..' }
+      end
+    end
   end
 
   def show
@@ -33,6 +40,6 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
   end
   def comment_params
-    params.require(:comment).permit(:author_id, :body)
+    params.require(:comment).permit( :post_id, :body, :author_id)
   end
 end

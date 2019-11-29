@@ -1,18 +1,15 @@
-<% @post.comments.each do |comment| %>
-  <br><br>
+
   <div class="card">
     <div class="card-header">
       <% if updated(comment) %>
         <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
       <% end  %>
       <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
-        <%= full_name(@post) %>
+        <%= comment.author.full_name %>
             </span>
     </div>
     <div class="card-body">
       <% if current_user %>
-        <% if @post.author_id == @current_user.id  %>
-
           <p class="card-text"><%= comment.body %>
           <% if (@current_user.id == comment.post.author_id && Time.now - comment.created_at < 3600) %>
             <br><br>
@@ -20,10 +17,7 @@
             <%= link_to 'Destroy Comment', [comment.post, comment],
                 method: :delete,
                 data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success"%>
-
-          <% end %>
         <% end %>
       <% end  %>
     </div>
   </div>
-<% end %>
