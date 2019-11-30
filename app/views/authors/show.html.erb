@@ -1,7 +1,10 @@
+<% if @author.image.attached? %>
+  <!-- @post.image.present? will always return true, use attached? to check presence -->
+  <%= image_tag(@author.image, style: "width: 200px; height: 200px; border-radius: 200px; box-shadow: 0 0 20px #666; ") if @author.image.attached? %>
+<% else %>
+  <%= image_tag("https://us.123rf.com/450wm/denisnata/denisnata1210/denisnata121000848/15814297-white-domestic-goose-isolated-on-white-background.jpg?ver=6", style: "width: 200px; height: 200px; border-radius: 200px; box-shadow: 0 0 20px #666; ") %>
+<% end %>
+</div>
+<p><%= @author.full_name %></p>
+<p><%= @author.email %></p>
 
-<%= @author.first_name %>
-<%= @author.last_name %>
-<%= @author.email %>
-<p>
-  <%= image_tag(@author.image, width: 40) if @author.image.attached? %>
-</p>

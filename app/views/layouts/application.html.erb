@@ -25,9 +25,16 @@
           <% end %>
           <% if current_user %>
             <%= link_to 'Log Out', logout_path, class:"navbar-brand" %>
-            <%= link_to @author do %>
-              <%= image_tag(@author.image, class: "icon__author") if @author.image.attached? %>
-            <% end %>
+            <span data-toggle="tooltip" data-placement="top" title="(<%= current_user.full_name %>)">
+              <%= link_to @author do %>
+                <% if @author.image.attached? %>
+                  <!-- @post.image.present? will always return true, use attached? to check presence -->
+                  <%= image_tag(current_user.image, class: "icon__author") if current_user.image.attached? %>
+                <% else %>
+                  <%= image_tag("https://us.123rf.com/450wm/denisnata/denisnata1210/denisnata121000848/15814297-white-domestic-goose-isolated-on-white-background.jpg?ver=6", class: "icon__author") %>
+                <% end %>
+               <% end %>
+             </span>
           <% else %>
             <%= link_to 'Sign Up', signup_path, class:"navbar-brand",  :style => "margin-right: 10px" %>
             <%= link_to 'Log In', login_path, class:"navbar-brand" %>
