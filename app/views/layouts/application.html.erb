@@ -27,7 +27,7 @@
             <%= link_to 'Log Out', logout_path, class:"navbar-brand" %>
             <span data-toggle="tooltip" data-placement="top" title="(<%= current_user.full_name %>)">
               <%= link_to @author do %>
-                <% if @author.image.attached? %>
+                <% if current_user.image.attached? %>
                   <!-- @post.image.present? will always return true, use attached? to check presence -->
                   <%= image_tag(current_user.image, class: "icon__author") if current_user.image.attached? %>
                 <% else %>
