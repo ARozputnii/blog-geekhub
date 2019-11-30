@@ -23,6 +23,6 @@ class AuthorsController < ApplicationController
 
 
   def author_params
-    params.require(:author).permit(:email, :password, :first_name, :last_name, :gender, :birthday)
+    params.require(:author).permit(:email, :password, :first_name, :last_name, :gender, :birthday, :image)
   end
 end

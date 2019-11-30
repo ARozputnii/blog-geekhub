@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    # seach in db/ else Poast.all
+    # seach in db with paginate
     if params[:search]
       @posts = Post.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 3)
     else

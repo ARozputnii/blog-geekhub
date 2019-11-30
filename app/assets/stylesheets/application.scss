@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 
+// Index
+
 .titles {
 	font-size: 35px;
 	color: #013a40;
@@ -29,6 +31,13 @@
 	transition: .5s;
 }
 .button_new_post:hover {background-position: right center;}
+
+
+.index__link__show:link {  color: #0b261f; font-size: 25px}
+.index__link__show:visited { text-decoration: none; color: #0b261f;font-size: 25px}
+.index__link__show:active { text-decoration: none; color: #0b261f; font-size: 25px}
+.index__link__show:hover { color: #0b261f; font-size: 25.5px}
+
 
 .new_post {
 	height: 200px;

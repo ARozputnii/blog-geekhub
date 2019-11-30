@@ -66,9 +66,16 @@
     </div>
   </div>
 
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <div class="actions" style="margin-left: 35%; padding: 20px 0 50px">
     <%= form.submit  class:"btn btn-outline-success" %>
     <%= link_to 'Back', posts_path , class:"btn btn-outline-success" , style:"margin-left: 10px;"%>
   </div>
+
+
 
 <% end %>

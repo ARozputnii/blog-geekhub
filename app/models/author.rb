@@ -6,6 +6,7 @@ class Author < ApplicationRecord
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
+  has_one_attached :image
   has_secure_password
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

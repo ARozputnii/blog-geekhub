@@ -2,3 +2,6 @@
 <%= @author.first_name %>
 <%= @author.last_name %>
 <%= @author.email %>
+<p>
+  <%= image_tag(@author.image, width: 40) if @author.image.attached? %>
+</p>
