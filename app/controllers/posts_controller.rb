@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @author = current_user
     # seach in db with paginate
     if params[:search]
       @posts = Post.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 3)
