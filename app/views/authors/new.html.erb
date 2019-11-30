@@ -1,13 +1,12 @@
 <%= form_for(@author) do |form| %>
 
 
-<h3 style="margin-top: 5%; text-align: center; text-transform: uppercase">registration</h3>
+    <h3 style="margin-top: 5%; text-align: center; text-transform: uppercase">registration</h3>
     <% if @author.errors.any? %>
       <div id="error_explanation" style="color: red; text-align: center;">
           <% @author.errors.full_messages.each do |msg| %>
             <li ><%= msg %></li>
           <% end %>
-
       </div>
     <% end %>
   <div class="row" style="margin-top: 50px">

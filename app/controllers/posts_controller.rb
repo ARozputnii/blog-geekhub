@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     # seach in db/ else Poast.all
     if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC")
+      @posts = Post.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 3)
     else
       @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
     end
