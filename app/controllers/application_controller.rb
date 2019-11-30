@@ -19,6 +19,8 @@ class ApplicationController < ActionController::Base
     session[:author_id] = author.id
   end
 
+private
+
   def logged_in?
     !current_user.nil?
   end

@@ -56,7 +56,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'faker', '~> 2.7'
 gem 'impressionist', '~> 1.6', '>= 1.6.1' #couter
-gem 'robocop', '~> 0.1.1'
+gem 'rubocop', '~> 0.77.0', require: false
 gem "figaro" # password to database
 gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'

@@ -1,10 +1,19 @@
+
 AllCops:
+  Enabled: true
+  Rails:
+    Enabled: true
   RunRailsCops: true
   TargetRubyVersion: 2.6.3
   Exclude:
-    - db/schema.rb
-    - node_modules/**/*
-    - db/migrate/*
+    - 'db/migrate/*'
+    - 'db/*'
+    - 'test/*'
+    - 'test/controllers/*'
+    - 'Rakefile'
+    - 'bin/spring'
+    - 'test/*/*/*'
+    - 'config/puma.rb'
 Metrics/LineLength:
   # This will disable the rule completely, regardless what other options you put
   # Enabled: false
@@ -54,3 +63,5 @@ Metrics/BlockLength:
     - spec/**/**
     - db/migrate/*
     - db/schema.rb
+Rails:
+  Enabled: true
