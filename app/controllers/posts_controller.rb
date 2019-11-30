@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   impressionist actions: [:show]
-
   before_action :require_login, only: %i[create edit update destroy]
   before_action :set_post, only: %i[show edit update destroy]
   before_action :owner, only: %i[edit update destroy]
