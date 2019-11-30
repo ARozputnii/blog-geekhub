@@ -38,7 +38,14 @@
 .index__link__show:active { text-decoration: none; color: #0b261f; font-size: 25px;}
 .index__link__show:hover { color: #0b261f; font-size: 25.5px;}
 
-
+.icon__author{
+  margin-top: 3px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px; /* Радиус скругления */
+  border: 1px solid deepskyblue; /* Параметры рамки */
+  box-shadow: 0 0 10px #666; /* Параметры тени */
+}
 
 
 .p_new {
