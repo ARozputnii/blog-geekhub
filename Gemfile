@@ -61,3 +61,4 @@ gem "figaro" # password to database
 gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
 gem 'bootstrap-will_paginate'
+gem 'ancestry', '~> 3.0', '>= 3.0.7' #вложеные коментарии

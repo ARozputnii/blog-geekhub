@@ -8,3 +8,11 @@ module ApplicationHelper
     true if cookies[:"actions"] % 5 == 0
   end
 end
+
+
+# gem ancestry (for nested comments)
+def ancestry_nested_comments(comments)
+  comments.map do |comment, sub_comments|
+    render(comment) + content_tag(:div, ancestry_nested_comments(sub_comments), class: 'ancestry_nested_comments')
+  end.join.html_safe
+end
