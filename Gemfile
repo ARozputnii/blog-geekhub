@@ -40,7 +40,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'annotate', '~> 3.0', '>= 3.0.3' #для роботы с дб моделями
 end
 
 group :test do
@@ -63,3 +62,4 @@ gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
 gem 'bootstrap-will_paginate'
 gem 'ancestry', '~> 3.0', '>= 3.0.7' #вложеные коментарии
+gem 'annotate', '~> 3.0', '>= 3.0.3' #для роботы с дб моделями

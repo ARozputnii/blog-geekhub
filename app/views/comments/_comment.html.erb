@@ -4,9 +4,19 @@
       <% if updated(comment) %>
         <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
       <% end  %>
-      <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
-        <%= comment.author.full_name %>
-            </span>
+      <div class="row">
+        <div class="col">
+          <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
+            <%= comment.author.full_name %>
+          </span>
+        </div>
+        <div class="col">
+          <%= fa_icon "thumbs-up" %>
+          count<!--Vote.all.count-->
+          <%= fa_icon "thumbs-down" %>
+        </div>
+      </div>
+
     </div>
     <div class="card-body">
       <% if current_user %>
