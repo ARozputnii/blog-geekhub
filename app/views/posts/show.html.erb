@@ -25,6 +25,7 @@
     <% end  %>
   <% end  %>
 
-
-<%= ancestry_nested_comments @post.comments.arrange(order: :created_at)  %>
 <%= render 'comments/form' %>
+<div class="container">
+<%= ancestry_nested_comments @post.comments.arrange(order: :created_at)  %>
+</div>

@@ -60,6 +60,9 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ancestry (3.0.7)
       activerecord (>= 3.2.0)
+    annotate (3.0.3)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 14.0)
     ast (2.4.0)
     autoprefixer-rails (9.6.1.1)
       execjs
@@ -240,6 +243,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry (~> 3.0, >= 3.0.7)
+  annotate (~> 3.0, >= 3.0.3)
   bcrypt (~> 3.1, >= 3.1.13)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.3.1)
