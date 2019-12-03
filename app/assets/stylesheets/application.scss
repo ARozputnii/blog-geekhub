@@ -94,7 +94,12 @@
   margin-left: 5%;
 }
 
-.icon_vote:link {  color: #555;}
-.icon_vote:visited { text-decoration: none; color: #777;}
-.icon_vote:active { text-decoration: none; color: #777;}
-.icon_vote:hover { color:black; text-decoration: none;}
+.icon_like:link {  color: #555;}
+.icon_like:visited { text-decoration: none; color: #777;}
+.icon_like:active { text-decoration: none; color: #777;}
+.icon_like:hover { color:black; text-decoration: none;}
+
+.icon_dislike:link {  color: darkred;}
+.icon_dislike:visited { text-decoration: none; color: darkred;}
+.icon_dislike:active { text-decoration: none; color: darkred;}
+.icon_dislike:hover { color:red; text-decoration: none;}

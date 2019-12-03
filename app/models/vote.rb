@@ -3,6 +3,7 @@
 # Table name: votes
 #
 #  id         :bigint           not null, primary key
+#  value      :integer
 #  vote       :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

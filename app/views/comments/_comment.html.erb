@@ -11,17 +11,14 @@
           </span>
         </div>
         <div class="col">
-          <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_vote" do %>
+          <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_like" do %>
           <%= fa_icon "thumbs-up" %>
           <% end %>
-          <!--No route matches [DELETE] "/posts/1/comments/1/votes"
-          <%#= link_to post_comment_votes_path(@post, comment), method: :delete, class: "icon_vote" do %>
-            <%#= fa_icon "thumbs-down" %>
-          <%# end %>-->
-          <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_vote" do %>
+           <%= count_value(comment.votes) %>
+          <%= link_to post_comment_dislike_create_path(@post, comment),method: :post, class: "icon_dislike" do %>
             <%= fa_icon "thumbs-down" %>
           <% end %>
-          Likes: <%= comment.votes.count || 0 %>
+           <%= count_vote(comment.votes) %>
           <!--Vote.all.count-->
         </div>
 

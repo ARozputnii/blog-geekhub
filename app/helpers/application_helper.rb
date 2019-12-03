@@ -16,3 +16,13 @@ def ancestry_nested_comments(comments)
     render(comment) + content_tag(:div, ancestry_nested_comments(sub_comments), class: 'ancestry_nested_comments')
   end.join.html_safe
 end
+
+
+#dislike
+def count_value(sample)
+  sample.where(value: nil).count
+end
+#like
+def count_vote(sample)
+  sample.where(vote: nil).count
+end

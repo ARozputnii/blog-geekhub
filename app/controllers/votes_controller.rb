@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   before_action :find_post
+  before_action :find_comment
   before_action :find_vote, only: [:destroy]
   #before_action :find_comment
 
@@ -7,20 +8,21 @@ class VotesController < ApplicationController
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
-      @comment = Comment.find(params[:comment_id])
-      @vote = @comment.votes.create(author: current_user)
+      # @comment = Comment.find(params[:comment_id])
+      @comment.votes.create!(author: current_user, vote: 1)
     end
     redirect_to @post
   end
 
   # dont work
-  def destroy
-    if !(already_liked?)
-      flash[:notice] = "Cannot unlike"
+  def create_dis
+    if already_liked?
+      flash[:notice] = "You can't like more than once"
     else
-      @vote.destroy
+      # @comment = Comment.find(params[:comment_id])
+      @comment.votes.create!(author: current_user, value: 1)
     end
-    redirect_to post_path(@post)
+    redirect_to @post
   end
 
   private
@@ -32,6 +34,9 @@ class VotesController < ApplicationController
 
   def find_post
     @post = Post.find(params[:post_id])
+  end
+  def find_comment
+    @comment = Comment.find(params[:comment_id])
   end
 
   def find_vote
