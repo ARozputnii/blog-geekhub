@@ -3,6 +3,7 @@
 # Table name: authors
 #
 #  id              :bigint           not null, primary key
+#  baned           :boolean          default(FALSE)
 #  birthday        :string
 #  email           :string
 #  first_name      :string

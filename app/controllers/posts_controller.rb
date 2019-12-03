@@ -33,15 +33,17 @@ class PostsController < ApplicationController
   end
   # POST /posts
   def create
+    if @current_user.baned == false
     @post = current_user.posts.build(post_params)
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @post.save
+          format.html { redirect_to @post, notice: 'Post was successfully created.' }
+          format.json { render :show, status: :created, location: @post }
+        else
+          format.html { render :new }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -79,7 +81,7 @@ class PostsController < ApplicationController
 
         # checking autorithations user or not
   def owner
-    if (@post.author_id == @current_user.id && Time.now - @post.created_at < 3601)
+    if (@post.author_id == @current_user.id && Time.now - @post.created_at < 3601 && @current_user.baned == false)
     else
       respond_to do |format|
         format.html { redirect_to posts_url, alert: 'Rights error' }

@@ -4,7 +4,11 @@
   <div class="titles">
     <p>Welcome to Our Blog!</p>
   </div>
-    <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
+    <% if current_user %>
+      <% if current_user.baned == false  %>
+       <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
+      <% end %>
+    <% end %>
   </div>
 
 <div class="background ">

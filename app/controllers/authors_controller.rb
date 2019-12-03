@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  
+  before_action :set_author, only: %i[show edit update ]
   def index
     @author = Author.all
   end
@@ -17,10 +17,27 @@ class AuthorsController < ApplicationController
       end
   end
 
-  def show
-    @author = Author.find(params[:id])
+  def edit
   end
 
+  def update
+    respond_to do |format|
+      if @author.update(author_params)
+        format.html { redirect_to @author, notice: 'User was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  def show
+  end
+
+  private
+
+  def set_author
+    @author = Author.find(params[:id])
+  end
 
   def author_params
     params.require(:author).permit(:email, :password, :first_name, :last_name, :gender, :birthday, :image)

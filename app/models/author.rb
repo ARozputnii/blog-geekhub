@@ -3,6 +3,7 @@
 # Table name: authors
 #
 #  id              :bigint           not null, primary key
+#  baned           :boolean          default(FALSE)
 #  birthday        :string
 #  email           :string
 #  first_name      :string
@@ -20,6 +21,8 @@
 class Author < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :votes, dependent: :destroy
+
 
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"

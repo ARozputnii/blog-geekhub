@@ -28,7 +28,7 @@ class Post < ApplicationRecord
   is_impressionable
 
 	def self.search(search)
-		where("name LIKE ?", "%#{search}%")
-		where("content LIKE ?", "%#{search}%")
+		where("title LIKE ? OR content LIKE ?", "%#{search}%","%#{search}%")
 	end
+
 end

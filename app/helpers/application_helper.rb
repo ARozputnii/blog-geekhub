@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # check updated or not
   def updated(sample)
     true if sample.updated_at.to_s != sample.created_at.to_s
   end
@@ -15,6 +16,12 @@ def ancestry_nested_comments(comments)
   comments.map do |comment, sub_comments|
     render(comment) + content_tag(:div, ancestry_nested_comments(sub_comments), class: 'ancestry_nested_comments')
   end.join.html_safe
+end
+
+
+# check owner or admin or not, time limit 1 hour
+def check_edit_rights(current_user, sample)
+  true if (current_user.id == sample.author_id && Time.now - sample.created_at < 3600 && current_user.baned == false)
 end
 
 
