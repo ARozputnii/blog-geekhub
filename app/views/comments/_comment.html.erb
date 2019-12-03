@@ -14,7 +14,7 @@
           <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_vote" do %>
           <%= fa_icon "thumbs-up" %>
           <% end %>
-          <%= link_to post_comment_votes_path(@post, comment), class: "icon_vote" do %>
+          <%= link_to post_comment_vote_path(@post, comment), method: :delete, class: "icon_vote" do %>
             <%= fa_icon "thumbs-down" %>
           <% end %>
           Likes: <%= comment.votes.count || 0 %>
