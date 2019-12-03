@@ -25,7 +25,7 @@
     <% end  %>
   <% end  %>
   <% if current_user %>
-    <% if @current_user.baned == false  %>
+    <% if current_user.baned == false  %>
       <%= render 'comments/form' %>
     <% else %>
       <div class="alert alert-danger" role="alert">

@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    if @current_user.banned == false
+    if @current_user.baned == false
       @comment = @post.comments.create(comment_params)
       @comment.author_id = current_user.id
       respond_to do |format|
