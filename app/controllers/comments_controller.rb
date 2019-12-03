@@ -16,8 +16,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @post.comments.create(comment_params)
     @comment.author_id = current_user.id
+    @comment = @post.comments.create(comment_params)
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @post, notice: 'Comment was successfully created.' }
@@ -62,7 +62,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
   end
   def owner
-    if @comment.author_id == @current_user.id || (@current_user.admin == true)
+    if @comment.author_id == @current_user.id
     else
       respond_to do |format|
         format.html { redirect_to @post, alert: 'You have no rights' }

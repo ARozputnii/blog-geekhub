@@ -24,6 +24,8 @@
 class Comment < ApplicationRecord
   belongs_to :post
   belongs_to :author
+  has_many   :votes, dependent: :destroy
+
   validates  :body, presence: true,
              length: { minimum: 1}
   # gem ancestry (вложенные коментарии)

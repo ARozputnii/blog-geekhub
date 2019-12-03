@@ -11,10 +11,16 @@
           </span>
         </div>
         <div class="col">
+          <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_vote" do %>
           <%= fa_icon "thumbs-up" %>
-          count<!--Vote.all.count-->
-          <%= fa_icon "thumbs-down" %>
+          <% end %>
+          <%= link_to post_comment_votes_path(@post, comment), class: "icon_vote" do %>
+            <%= fa_icon "thumbs-down" %>
+          <% end %>
+          Likes: <%= comment.votes.count || 0 %>
+          <!--Vote.all.count-->
         </div>
+
       </div>
 
     </div>
