@@ -11,15 +11,17 @@
           </span>
         </div>
         <div class="col">
-          <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_like" do %>
-          <%= fa_icon "thumbs-up" %>
+          <% if current_user %>
+            <%= link_to post_comment_votes_path(@post, comment),method: :post, class: "icon_like" do %>
+              <%= fa_icon "thumbs-up" %>
+            <% end %>
+            <%= count_value(comment.votes) %>
+            <%= link_to post_comment_dislike_create_path(@post, comment),method: :post, class: "icon_dislike" do %>
+              <%= fa_icon "thumbs-down" %>
+            <% end %>
+            <%= count_vote(comment.votes) %>
+            <!--Vote.all.count-->
           <% end %>
-           <%= count_value(comment.votes) %>
-          <%= link_to post_comment_dislike_create_path(@post, comment),method: :post, class: "icon_dislike" do %>
-            <%= fa_icon "thumbs-down" %>
-          <% end %>
-           <%= count_vote(comment.votes) %>
-          <!--Vote.all.count-->
         </div>
 
       </div>

@@ -33,7 +33,12 @@
         <br>
       </div>
     <% end  %>
-  <% end  %>
-  <div class="container">
-    <%= ancestry_nested_comments @post.comments.arrange(order: :created_at)  %>
+
+    <div class="container">
+      <%= ancestry_nested_comments @post.comments.arrange(order: :created_at)  %>
+    </div>
+  <% else %>
+  <div style="text-align: center">
+    <%= link_to 'login to view and add comments', login_path%>
   </div>
+  <% end  %>
