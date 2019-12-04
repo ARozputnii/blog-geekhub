@@ -1,7 +1,7 @@
 ActiveAdmin.register_page "Dashboard" do
 
   controller do
-    http_basic_authenticate_with :name => "admin", :password => "admin"
+    http_basic_authenticate_with :name =>  ENV['blog-geekhub_ACTIVEADMIN'] , :password => ENV['blog-geekhub_ACTIVEADMIN']
   end
 
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
