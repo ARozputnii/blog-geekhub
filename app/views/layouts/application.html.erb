@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <% if pop_up and current_user == nil %>
+      <script>alert('Sign up to see all the functionality of the site');</script>
+    <% end %>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light">
+        <%= link_to image_tag( 'https://i.ibb.co/TbQxTHy/w256h2561372501800-Sketch-Book5.png',size: "50x50"),root_path, class: "logo" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a><%= link_to 'Home', posts_path, class:"nav-link" %><span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "col-form-label", style: "text-align: center" %>
+            <%= submit_tag "Search", :class => "btn btn-outline-secondary", :style => ""%>
+          <% end %>
+          <ul class="navbar-nav ml-auto">
+            <% if current_user %>
+              <li class="nav-item">
+                <%= link_to 'Log Out', logout_path, class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <span data-toggle="tooltip" data-placement="top" title="(<%= current_user.full_name %>)">
+                  <%= link_to @author do %>
+                    <% if current_user.image.attached? %>
+                      <!-- @post.image.present? will always return true, use attached? to check presence -->
+                      <%= image_tag(current_user.image, class: "icon__author") if current_user.image.attached? %>
+                    <% else %>
+                      <%= image_tag("https://us.123rf.com/450wm/denisnata/denisnata1210/denisnata121000848/15814297-white-domestic-goose-isolated-on-white-background.jpg?ver=6", class: "icon__author") %>
+                    <% end %>
+                   <% end %>
+                 </span>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to 'Sign Up', signup_path, class:"nav-link", style: "margin-right: 10px" %>
+              </li>
+              <li class="nav-item">
+              <%= link_to 'Log In', login_path, class:"nav-link" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+          <%= yield %>
+        <footer class="footer_index">
+            <p>
+              Blog 2.04. 2019 Geekhub-homework. A.Rozputnii.
+            </p>
+        </footer>
+      </div>
+  </body>
+</html>

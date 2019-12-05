@@ -1,0 +1,106 @@
+
+@import "font-awesome";
+@import "bootstrap";
+
+
+// Index
+
+.titles {
+	font-size: 35px;
+	color: #013a40;
+	text-transform: uppercase;
+	text-align: center;
+	background: url(https://www.groovypost.com/wp-content/uploads/2012/06/notepad-featured.jpg) no-repeat center top / cover ;
+}
+.titles p{
+  padding-top: 30px;
+}
+.button_new_post {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	color: white;
+	padding: 10px 20px;
+	margin: 25px 20px;
+	border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+	background-size: 200% auto;
+	box-shadow: 0 0 20px rgba(0,0,0,.1);
+	transition: .5s;
+}
+.button_new_post:hover {background-position: right center;}
+
+
+.index__link__show:link {  color: #0b261f; font-size: 25px;}
+.index__link__show:visited { text-decoration: none; color: #0b261f;font-size: 25px;}
+.index__link__show:active { text-decoration: none; color: #0b261f; font-size: 25px;}
+.index__link__show:hover { color: #0b261f; font-size: 25.5px;}
+
+.icon__author{
+  margin-top: 3px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px; /* Радиус скругления */
+  border: 1px solid deepskyblue; /* Параметры рамки */
+  box-shadow: 0 0 10px #666; /* Параметры тени */
+}
+
+
+.p_new {
+	font-size: 40px;
+	margin-left: 50px;
+	padding-top: 60px;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.form-group {
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+.label_show {
+	font-size:15px;
+	font-style: italic;
+}
+.show {
+	background: #ceeff2;
+	margin-top: 20px;
+	margin-bottom: 50px;
+
+}
+
+.footer_index p {
+  flex: 0 0 auto;
+  color: black;
+  background: #e9edf5;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px 0px 10px;
+}
+
+.background {
+  background: #e9edf5;
+}
+
+/*comment*/
+.card_comments{
+  border-left: 1px solid darkgray; /* Параметры рамки */
+}
+.ancestry_nested_comments{
+  margin-left: 5%;
+}
+
+.icon_like:link {  color: #555;}
+.icon_like:visited { text-decoration: none; color: #777;}
+.icon_like:active { text-decoration: none; color: #777;}
+.icon_like:hover { color:black; text-decoration: none;}
+
+.icon_dislike:link {  color: darkred;}
+.icon_dislike:visited { text-decoration: none; color: darkred;}
+.icon_dislike:active { text-decoration: none; color: darkred;}
+.icon_dislike:hover { color:red; text-decoration: none;}

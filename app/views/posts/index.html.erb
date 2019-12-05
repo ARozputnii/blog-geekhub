@@ -1,0 +1,50 @@
+
+
+<div class="titles">
+  <div class="titles">
+    <p>Welcome to Our Blog!</p>
+  </div>
+    <% if current_user %>
+      <% if current_user.baned == false  %>
+       <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
+      <% end %>
+    <% end %>
+  </div>
+
+<div class="background ">
+  <% @posts.each do |post| %>
+    <br>
+    <div class="card">
+      <div class="card-header text-center " >
+        <%= link_to post.title, post, class: "index__link__show" %>
+      </div>
+      <div class="card-body" style="background: #b6dbd4">
+        <blockquote class="blockquote mb-0">
+            <div class="row">
+              <div class="col-sm-4 center-block">
+                <% if post.image.attached? %>
+                  <!-- @post.image.present? will always return true, use attached? to check presence -->
+                    <%= image_tag post.image ,size: "300x300" if post.image.attached? %>
+                  <% else %>
+                  <%= image_tag("http://www.santis.mn/nimage.png", {:style => "width:300px;"}) %>
+                <% end %>
+              </div>
+              <div class="col-sm-8 ">
+                <p style="font-size: 18px"><%=h truncate(post.content, :length => 300 ) %></p>
+                <footer class="blockquote-footer ">author:
+                  <cite title="Source Title"><%= full_name(post) %>
+                    <p style="font-size: 13px">
+                      <br>
+                      <%= fa_icon "calendar", style: "margin-right: 2%" %> <%= post.created_at.to_date.strftime("%d %B, %Y") %>
+                    </p>
+                  </cite>
+                </footer>
+              </div>
+            </div>
+        </blockquote>
+
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate(@posts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination-sm ', style:'margin-left: 35%') %>

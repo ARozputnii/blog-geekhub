@@ -1,0 +1,30 @@
+<div class="_form_comment">
+  <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  <!--  how to check error?
+    <%# if @post.comments.build.errors.any? %>
+      <div id="error_explanation" style="color: red; text-align: center;">
+        <%# @post.comments.build.errors.full_messages.each do |msg| %>
+          <li ><%#= msg %></li>
+        <%# end %>
+      </div>
+    <%# end %>-->
+    <% if current_user %>
+      <%= form.hidden_field :parent_id %>
+      <div class="form-group row">
+        <div class="col-sm-2" style="margin: 2% 0 0 2%">
+          <%= form.label :body,"Add comment" %>
+          <div class="actions" style="padding-bottom: 5%">
+            <%= form.submit "Create", class:"btn btn-outline-success" %>
+          </div>
+        </div>
+          <%= form.text_area :body, class:"form-control col-sm-7" %>
+        </div>
+      </div>
+
+
+    <% else %>
+      <%= link_to "log in to view or add a comment", login_path, class:"btn btn-outline-dark" ,style: "margin: 0% 0% 5% 2.5%"%>
+    <% end  %>
+  <% end %>
+</div>
+
