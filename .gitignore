@@ -64,7 +64,6 @@ config/application.yml
 database.yml
 /.idea
 .idea
-config/
 public/
 
 # Ignore all logfiles and tempfiles.
