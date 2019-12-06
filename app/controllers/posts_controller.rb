@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
     end
+    @post = Post.first
     @author = current_user
   end
 

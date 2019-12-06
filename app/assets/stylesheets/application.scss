@@ -2,20 +2,59 @@
 @import "font-awesome";
 @import "bootstrap";
 
+body{
+  min-width: 450px;
+  font-size: 14px;
+  font-family: 'Playfair Display' serif;
+}
+.img{
+  max-width: 100%;
+  height: auto;
+}
+.a{
+  color: #b4ad9e;
+}
+.a:hover{
+  color: black;
+}
+.navbar-brand{
+  font-family: 'Inconsolata', monospace;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.nav-link{
+  font-size: 20px;
+  margin-right: 30px;
+}
+.nav-link:hover {
+  font-size: 21px;
+}
+.nav-item a::after{
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  transform: scale(0);
+  transition: all .3s;
+}
+.nav-item a:hover::after{
+  transform: scale(1);
+}
+
 
 // Index
 
-.titles {
+/*.titles {
 	font-size: 35px;
 	color: #013a40;
 	text-transform: uppercase;
 	text-align: center;
 	background: url(https://www.groovypost.com/wp-content/uploads/2012/06/notepad-featured.jpg) no-repeat center top / cover ;
 }
-.titles p{
-  padding-top: 30px;
-}
-.button_new_post {
+
+/*.button_new_post {
 	text-decoration: none;
 	outline: none;
 	display: inline-block;
@@ -31,21 +70,64 @@
 	box-shadow: 0 0 20px rgba(0,0,0,.1);
 	transition: .5s;
 }
-.button_new_post:hover {background-position: right center;}
+.button_new_post:hover {background-position: right center;}*/
+
+.single-post{
+  display: block;
+  height: 600px;
+  background: url("https://i.ibb.co/QfCB2XN/3.jpg")no-repeat center top / cover ;
+}
+.single-post h3 {
+  padding-top: 150px;
+  text-align: center;
+  display: block;
+  height: 200px;
+  background: linear-gradient(to bottom, #353537, #cfcfcf);
+}
 
 
+.index__link:link {  color: #292929; font-size: 30px;}
+.index__link:visited { text-decoration: none; color: #292929;font-size: 30px;}
+.index__link:active { text-decoration: none; color: #292929; font-size: 30px;}
+.index__link:hover { color: black; font-size: 30.5px; text-decoration: none;}
+
+
+.card{
+  background: linear-gradient(to bottom, white, #cfcfcf);
+
+}
+.card .card-header{
+  padding-top: 120px;
+  background: #F7F7F7;
+  background: linear-gradient(to bottom, #cfcfcf, white);
+}
+.card h3{
+  font-size: 14px;
+  color: black;
+}
+.card .blockquote{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.card .blockquote-footer{
+  margin-top: 40px;
+}
+.card P{
+  font-size: 12px;
+  color: black;
+}
 .index__link__show:link {  color: #0b261f; font-size: 25px;}
 .index__link__show:visited { text-decoration: none; color: #0b261f;font-size: 25px;}
 .index__link__show:active { text-decoration: none; color: #0b261f; font-size: 25px;}
 .index__link__show:hover { color: #0b261f; font-size: 25.5px;}
 
 .icon__author{
-  margin-top: 3px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100px; /* Радиус скругления */
-  border: 1px solid deepskyblue; /* Параметры рамки */
-  box-shadow: 0 0 10px #666; /* Параметры тени */
+  margin-top: 10px;
+  width: 55px;
+  height: 35px;
+  border-radius: 5px; /* Радиус скругления */
+  border: 1px solid #555555; /* Параметры рамки */
+  box-shadow: 0 0 5px #ccc; /* Параметры тени */
 }
 
 
@@ -71,7 +153,6 @@
 	background: #ceeff2;
 	margin-top: 20px;
 	margin-bottom: 50px;
-
 }
 
 .footer_index p {

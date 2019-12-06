@@ -1,50 +1,61 @@
-
-
-<div class="titles">
-  <div class="titles">
-    <p>Welcome to Our Blog!</p>
-  </div>
-    <% if current_user %>
-      <% if current_user.baned == false  %>
-       <%= button_to "add post", new_post_path(@post), :class => "button_new_post", :method => :get %><br>
-      <% end %>
-    <% end %>
-  </div>
-
-<div class="background ">
-  <% @posts.each do |post| %>
-    <br>
-    <div class="card">
-      <div class="card-header text-center " >
-        <%= link_to post.title, post, class: "index__link__show" %>
-      </div>
-      <div class="card-body" style="background: #b6dbd4">
-        <blockquote class="blockquote mb-0">
-            <div class="row">
-              <div class="col-sm-4 center-block">
-                <% if post.image.attached? %>
-                  <!-- @post.image.present? will always return true, use attached? to check presence -->
-                    <%= image_tag post.image ,size: "300x300" if post.image.attached? %>
-                  <% else %>
-                  <%= image_tag("http://www.santis.mn/nimage.png", {:style => "width:300px;"}) %>
-                <% end %>
-              </div>
-              <div class="col-sm-8 ">
-                <p style="font-size: 18px"><%=h truncate(post.content, :length => 300 ) %></p>
-                <footer class="blockquote-footer ">author:
-                  <cite title="Source Title"><%= full_name(post) %>
-                    <p style="font-size: 13px">
-                      <br>
-                      <%= fa_icon "calendar", style: "margin-right: 2%" %> <%= post.created_at.to_date.strftime("%d %B, %Y") %>
-                    </p>
-                  </cite>
-                </footer>
-              </div>
-            </div>
-        </blockquote>
-
+<div class="container-fluid">
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.ibb.co/VWCLfVB/1-wqz-Pu-RKEMxhe-MSJZSr-Kap-A.jpg" class="d-block h-50 w-100" alt="...">
+          <div class="carousel-caption">
+            <p>
+              <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "col-form-label", style: "text-align: center" %>
+                <%= submit_tag "Search", :class => "btn btn-light", :style => ""%>
+              <% end %>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  <% end %>
+  </div><!-- carusel-->
+  <div > <!--Post.first-->
+    <div class="single-post">
+      <h3><%= link_to @post.title, @post, class: "index__link" %></h3>
+    </div>
+  </div>
+  <div>
+    <% @posts.each do |post| %>
+      <div class="card">
+        <div class="card-header text-center " >
+          <%= link_to post.title, post, class: "index__link__show" %>
+        </div>
+        <div class="card-body" >
+          <div class="row">
+            <div class="col-lg-4 text-center">
+              <% if post.image.attached? %>
+                <%= image_tag post.image ,size: "300x300" if post.image.attached? %>
+              <% else %>
+                <%= image_tag("http://www.santis.mn/nimage.png", {:style => "width:300px;"}) %>
+              <% end %>
+            </div>
+            <div class="col-lg-8 text-justify">
+              <blockquote class="blockquote">
+                <h3><%=h truncate(post.content, length: 500 ) %></h3>
+                <footer class="blockquote-footer ">author:
+                <cite title="Source Title "><%= full_name(post) %>
+                  <p style="font-size: 13px;">
+                    <%= fa_icon "calendar", style: "margin-right: 2%" %> <%= post.created_at.to_date.strftime("%d %B, %Y") %>
+                  </p>
+                </cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div> <!--post.all-->
+
+  <div class="align-items-center" style="background: #cfcfcf; padding-top: 20px; border-top: 1px solid black;">
+    <%= will_paginate(@posts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination', style: "margin-left: 42%") %>
+  </div>
 </div>
-<%= will_paginate(@posts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination-sm ', style:'margin-left: 35%') %>
+
