@@ -66,15 +66,8 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
 config/application.yml
 database.yml
 /.idea
 .idea
-public/
-
-# Ignore all logfiles and tempfiles.
-
-/log/development.log
-
-
-babel.config.js
