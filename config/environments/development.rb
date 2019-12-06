@@ -4,14 +4,14 @@ Rails.application.configure do
   #
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'a.rozputnii.gmail.com',
+      address:              'smtp.gmail.com',
       port:                 587,
       domain:               'example.com',
-      user_name:            '<username>',
-      password:             '<password>',
+      user_name:            ENV['BLOG_MAIL_USERNAME'],
+      password:             ENV['BLOG_MAIL_PASSWORD'],
       authentication:       'plain',
-      enable_starttls_auto: true }
-
+      enable_starttls_auto: true
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

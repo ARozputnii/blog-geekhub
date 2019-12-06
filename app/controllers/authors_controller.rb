@@ -11,15 +11,10 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
       if @author.save
-          redirect_to login_path, notice: 'Author was created! Now you can log in!'
-          # Tell the AuthorMailer to send a welcome email after save
-          AuthorMailer.with(author: @author).welcome_email.deliver_later
-
-          format.html { redirect_to(@author, notice: 'User was successfully created.') }
-          format.json { render json: @author, status: :created, location: @author }
+        AuthorMailer.with(author: @author).welcome_email.deliver_later
+        redirect_to login_path, notice: 'Author was created! Now you can log in!'
       else
         render :new
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
   end
 
