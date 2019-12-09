@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
       respond_to do |format|
         if @post.save
-          format.html { redirect_to @post, notice: 'Post was successfully created.' }
+          format.html { redirect_to @post, notice: 'Пост был успешно создан.' }
           format.json { render :show, status: :created, location: @post }
         else
           format.html { render :new }
@@ -56,7 +56,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @post, notice: 'Пост был успешно обновлён.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -69,7 +69,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to posts_url, notice: 'Пост был успешно удалён.' }
       format.json { head :no_content }
     end
   end
@@ -85,7 +85,7 @@ class PostsController < ApplicationController
     if (@post.author_id == @current_user.id && Time.now - @post.created_at < 3601 && @current_user.baned == false)
     else
       respond_to do |format|
-        format.html { redirect_to posts_url, alert: 'Rights error' }
+        format.html { redirect_to posts_url, alert: 'У вас нет прав, зарегестрируйтесь.' }
       end
     end
   end

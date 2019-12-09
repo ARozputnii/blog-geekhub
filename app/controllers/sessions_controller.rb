@@ -9,19 +9,19 @@ class SessionsController < ApplicationController
         login_in(author)
         redirect_to root_path
       else
-        flash.now[:alert] = 'Please activate your account by following the
-        instructions in the account confirmation email you received to proceed'
+        flash.now[:alert] = 'Пожалуйста, активируйте свою учетную запись, следуя
+         инструкции в электронном письме с подтверждением, которое вы получили, чтобы продолжить'
         render 'new'
       end
     else
-      flash.now[:alert] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:alert] = 'Неверная комбинация электронной почты или пароля' # Not quite right!
       render 'new'
     end
   end
 
   def destroy
     session[:author_id] = nil
-    redirect_to root_path, notice: 'Logged out!'
+    redirect_to root_path, notice: 'Досвидания!'
   end
 end
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
   ActiveAdmin.routes(self)
   root 'posts#index'
 
@@ -19,4 +20,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'authors#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  resources :password_resets
+
 end

@@ -65,3 +65,4 @@ gem 'ancestry', '~> 3.0', '>= 3.0.7' #вложеные коментарии
 gem 'annotate', '~> 3.0', '>= 3.0.3' #для роботы с дб моделями
 gem 'byebug'
 gem 'activeadmin'
+#gem "figaro"

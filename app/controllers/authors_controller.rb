@@ -16,10 +16,10 @@ class AuthorsController < ApplicationController
 
       #AuthorMailer.registration_confirmation(@author).deliver
 
-      flash[:success] = "Please confirm your email address to continue"
+      flash[:success] = "Пожалуйста, подтвердите свой адрес электронной почты, чтобы продолжить"
       redirect_to root_url
     else
-      flash[:error] = "Ooooppss, something went wrong!"
+      flash[:error] = "что-то пошло не так!"
       render 'new'
     end
   end
@@ -30,7 +30,7 @@ class AuthorsController < ApplicationController
   def update
     respond_to do |format|
       if @author.update(author_params)
-        format.html { redirect_to @author, notice: 'User was successfully updated.' }
+        format.html { redirect_to @author, notice: 'Пользователь был успешно обновлен.' }
       else
         format.html { render :edit }
       end
@@ -44,11 +44,11 @@ class AuthorsController < ApplicationController
     #@author = Author.find(params[:id])
     if @author
       @author.email_activate
-      flash[:success] = "Welcome to the Sample App! Your email has been confirmed.
-      Please sign in to continue."
+      flash[:success] = "Ваше сообщение было подтверждено.
+       Пожалуйста, войдите, чтобы продолжить"
       redirect_to login_path
     else
-      flash[:error] = "Sorry. User does not exist"
+      flash[:error] = "Пользователя не существует"
       redirect_to root_url
     end
   end

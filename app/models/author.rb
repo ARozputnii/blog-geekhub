@@ -2,18 +2,20 @@
 #
 # Table name: authors
 #
-#  id              :bigint           not null, primary key
-#  baned           :boolean          default(FALSE)
-#  birthday        :string
-#  confirm_token   :string
-#  email           :string
-#  email_confirmed :boolean          default(FALSE)
-#  first_name      :string
-#  gender          :string
-#  last_name       :string
-#  password_digest :string
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                     :bigint           not null, primary key
+#  baned                  :boolean          default(FALSE)
+#  birthday               :string
+#  confirm_token          :string
+#  email                  :string
+#  email_confirmed        :boolean          default(FALSE)
+#  first_name             :string
+#  gender                 :string
+#  last_name              :string
+#  password_digest        :string
+#  password_reset_sent_at :datetime
+#  password_reset_token   :string
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
 #
 # Indexes
 #
@@ -46,13 +48,29 @@ class Author < ApplicationRecord
   def email_activate
     self.email_confirmed = true
     self.confirm_token = nil
-    save!(:validate => false)
+    save!(validate: false)
+  end
+
+  def send_password_reset
+    confirmation_token
+    self.password_reset_sent_at = Time.zone.now
+    save!
+    AuthorMailer.password_reset(self).deliver
   end
 
 
   private
 
+=begin
+  #создание токина с присвоением до атрибута модели
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while Author.exists?(column => self[column])
+  end
+=end
 
+  #создание токина
   def confirmation_token
     if self.confirm_token.blank?
       self.confirm_token = SecureRandom.urlsafe_base64.to_s

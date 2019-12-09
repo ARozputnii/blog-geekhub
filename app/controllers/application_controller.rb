@@ -38,7 +38,7 @@ private
   def banned?
     if current_user.present?
       if current_user.baned == true
-        flash[:alert] = 'Your are not allowed to create comments or posts. (banned)'
+        flash[:alert] = 'Вы не сможете создавать и комментировать посты (бан на 99999дней)'
       end
     end
   end
