@@ -1,81 +1,68 @@
-<%= form_for(@author) do |form| %>
-
-
-    <h3 style="margin-top: 5%; text-align: center; text-transform: uppercase">registration</h3>
-    <% if @author.errors.any? %>
-      <div id="error_explanation" style="color: red; text-align: center;">
-          <% @author.errors.full_messages.each do |msg| %>
-            <li ><%= msg %></li>
-          <% end %>
-      </div>
-    <% end %>
-  <div class="row" style="margin-top: 50px">
-    <div class="col-sm-5 offset-sm-1">
-      <div class="form-group row"  >
-        <%= form.label :first_name, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.text_field :first_name, class:"form-control" %>
+<div class="container-fluid">
+  <%= form_for(@author) do |form| %>
+      <h3 style="margin-top: 3%; text-align: center; text-transform: uppercase">Регистрация</h3>
+      <% if @author.errors.any? %>
+        <div id="error_explanation" style="color: red; text-align: center;">
+            <% @author.errors.full_messages.each do |msg| %>
+              <li ><%= msg %></li>
+            <% end %>
+        </div>
+      <% end %>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-sm-5 offset-sm-1">
+        <div class="form-group row"  >
+          <%= form.label :first_name, "Имя:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.text_field :first_name, class:"form-control" %>
+          </div>
+        </div>
+        <div class="form-group row"  >
+          <%= form.label :last_name,"Фамилия:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.text_field :last_name, class:"form-control" %>
+          </div>
+        </div>
+        <div class="form-group row"  >
+          <%= form.label :email,"Почта:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.email_field :email, class:"form-control" %>
+          </div>
         </div>
       </div>
-
-      <div class="form-group row"  >
-        <%= form.label :last_name, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.text_field :last_name, class:"form-control" %>
+      <div class="col-sm-5 offset-sm-1">
+        <div class="form-group row"  >
+          <%= form.label :password,"Пароль:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.password_field :password, class:"form-control" %>
+          </div>
+        </div>
+        <div class="form-group row"  >
+          <%= form.label :password_confirmation,"Подтвердите пароль:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.password_field :password_confirmation, class:"form-control" %>
+          </div>
+        </div>
+        <!--  <div class="form-group row"  >
+          <%#= form.label :gender, class:"col col-form-label" %>
+          <div class="col">
+            <%#= form.text_field :gender, class:"form-control" %>
+          </div>
+        </div>-->
+        <div class="form-group row"  >
+          <%= form.label :birthday,"День рождения:", class:"col-sm-3 col-form-label" %>
+          <div class="col-sm-6">
+            <%= form.date_field :birthday, class:"form-control" %>
+          </div>
         </div>
       </div>
-
-      <div class="form-group row"  >
-        <%= form.label :email, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.email_field :email, class:"form-control" %>
-        </div>
+      <div class="form-group offset-lg-3" >
+        <%= form.label :image, "Загрузите автарку", class:"col-form-label" %>
+        <%= form.file_field :image %>
       </div>
     </div>
-    <div class="col-sm-5 offset-sm-1">
-
-      <div class="form-group row"  >
-        <%= form.label :password, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.password_field :password, class:"form-control" %>
-        </div>
-      </div>
-
-      <div class="form-group row"  >
-        <%= form.label :password_confirmation, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.password_field :password_confirmation, class:"form-control" %>
-        </div>
-      </div>
-
-
-      <!--  <div class="form-group row"  >
-    <%#= form.label :gender, class:"col col-form-label" %>
-    <div class="col">
-      <%#= form.text_field :gender, class:"form-control" %>
+    <div class="actions" style="margin-left: 40%; padding: 20px 0 50px">
+      <%= form.submit  class:"btn btn-outline-success" %>
+      <%= link_to 'Back', posts_path , class:"btn btn-outline-success" , style:"margin-left: 10px;"%>
     </div>
-  </div>-->
-
-
-      <div class="form-group row"  >
-        <%= form.label :birthday, class:"col-sm-3 col-form-label" %>
-        <div class="col-sm-6">
-          <%= form.date_field :birthday, class:"form-control" %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions" style="margin-left: 35%; padding: 20px 0 50px">
-    <%= form.submit  class:"btn btn-outline-success" %>
-    <%= link_to 'Back', posts_path , class:"btn btn-outline-success" , style:"margin-left: 10px;"%>
-  </div>
-
-
-
-<% end %>
+  <% end %>
+</div>

@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
         login_in(author)
         redirect_to root_path
       else
-        flash.now[:alert] = 'Пожалуйста, активируйте свою учетную запись, следуя
-         инструкции в электронном письме с подтверждением, которое вы получили, чтобы продолжить'
+        flash.now[:alert] = 'Пожалуйста, активируйте свою учетную запись, следуя railинструкции в электронном письме с подтверждением, которое вы получили, чтобы продолжить'
         render 'new'
       end
     else
