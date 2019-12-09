@@ -13,7 +13,6 @@
 #  last_name              :string
 #  password_digest        :string
 #  password_reset_sent_at :datetime
-#  password_reset_token   :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #

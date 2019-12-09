@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_204052) do
+ActiveRecord::Schema.define(version: 2019_12_09_220215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 2019_12_09_204052) do
     t.boolean "baned", default: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-    t.string "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.index ["email"], name: "index_authors_on_email", unique: true
   end
