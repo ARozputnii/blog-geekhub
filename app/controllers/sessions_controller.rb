@@ -2,20 +2,20 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-
     author = Author.find_by_email(params[:email])
     if author&.authenticate(params[:password])
-      session[:author_id] = author.id
       if author.email_confirmed
-        sign_in
-        redirect_back
+        session[:author_id] = author.id
+        login_in(author)
+        redirect_to root_path
       else
-        flash.now[:error] = 'Please activate your account by following the
+
+        flash.now[:alert] = 'Please activate your account by following the
         instructions in the account confirmation email you received to proceed'
         render 'new'
       end
     else
-      flash.now[:error] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:alert] = 'Invalid email/password combination' # Not quite right!
       render 'new'
     end
   end

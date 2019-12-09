@@ -10,6 +10,7 @@
   </head>
   <body>
 
+
     <% if pop_up and current_user == nil %>
       <script>alert('Sign up to see all the functionality of the site');</script>
     <% end %>
@@ -65,7 +66,13 @@
         </div>
       </nav>
     </div> <!--navbar-->
-
+    <div class="container-fluid">
+      <% if notice != nil  %>
+        <p class="alert alert-primary" role="alert"><%= notice %></p>
+      <% elsif alert != nil %>
+        <p class="alert alert-danger" role="alert"><%= alert %></p>
+      <% end %>
+    </div>
     <%= yield %>
 
   </body>

@@ -10,6 +10,7 @@ class AuthorMailer < ApplicationMailer
 
   def registration_confirmation
     @author = params[:author]
+    @url = confirm_email_author_url(@author.confirm_token)
     mail(to: @author.email, subject: "Registration Confirmation")
   end
 

@@ -7,11 +7,12 @@ class AuthorsController < ApplicationController
   def new
     @author = Author.new
   end
+
   def create
     @author = Author.new(author_params)
     if @author.save
-      # AuthorMailer.with(author: @author).welcome_email.deliver_later
-       AuthorMailer.with(author: @author).registration_confirmation.deliver_later
+       AuthorMailer.with(author: @author).welcome_email.deliver_later
+        AuthorMailer.with(author: @author).registration_confirmation.deliver_later
 
       #AuthorMailer.registration_confirmation(@author).deliver
 
@@ -39,8 +40,8 @@ class AuthorsController < ApplicationController
   def show
   end
   def confirm_email
-    #author = Author.find_by_confirm_token(params[:id]
-    @author = Author.find(params[:id])
+    @author = Author.find_by_confirm_token(params[:id])
+    #@author = Author.find(params[:id])
     if @author
       @author.email_activate
       flash[:success] = "Welcome to the Sample App! Your email has been confirmed.
