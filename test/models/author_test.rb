@@ -5,7 +5,9 @@
 #  id              :bigint           not null, primary key
 #  baned           :boolean          default(FALSE)
 #  birthday        :string
+#  confirm_token   :string
 #  email           :string
+#  email_confirmed :boolean          default(FALSE)
 #  first_name      :string
 #  gender          :string
 #  last_name       :string

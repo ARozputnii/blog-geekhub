@@ -9,7 +9,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :authors
+  resources :authors do
+    member do
+      get :confirm_email
+    end
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'authors#new', as: 'signup'
