@@ -11,7 +11,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     if @author.save
-       AuthorMailer.with(author: @author).welcome_email.deliver_later
+      # AuthorMailer.with(author: @author).welcome_email.deliver_later
         AuthorMailer.with(author: @author).registration_confirmation.deliver_later
 
       #AuthorMailer.registration_confirmation(@author).deliver

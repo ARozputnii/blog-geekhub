@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
         login_in(author)
         redirect_to root_path
       else
-
         flash.now[:alert] = 'Please activate your account by following the
         instructions in the account confirmation email you received to proceed'
         render 'new'
