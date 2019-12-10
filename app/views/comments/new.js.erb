@@ -1,0 +1,4 @@
+// If reply
+$("#comment-<%=@comment.parent_id %>").after('<%= j render('replies', comment: @comment) %>');
+// If new comment
+$("#new_comment").after('<%= j render 'form' %>');

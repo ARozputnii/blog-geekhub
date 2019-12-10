@@ -1,0 +1,3 @@
+$("#comment-<%=@comment.id %>").hide(250)
+$("#comment-<%=@comment.id %>").after('<%= j render('comments/edit', comment: @comment, ) %>');
+

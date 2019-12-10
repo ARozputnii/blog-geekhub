@@ -19,41 +19,54 @@ class CommentsController < ApplicationController
     if @current_user.baned == false
       @comment = @post.comments.create(comment_params)
       @comment.author_id = current_user.id
-      respond_to do |format|
-        if @comment.save
-          format.html { redirect_to @post, notice: 'Comment was successfully created.' }
-        else
-          format.html { redirect_to @post, alert: 'Smth went wrong..' }
+      if @comment.ancestors.count <= 4
+        respond_to do |format|
+          # next chooses js.erb for creating new comment or nested(reply)
+          if @comment.save && !@comment.ancestry.nil?
+            format.js { render 'create_reply', status: :created, location: @post }
+          elsif @comment.save && @comment.parent_id.nil?
+            format.js { render 'create', status: :created, location: @post }
+            format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+          else
+            format.html { redirect_to @post, alert: @comment.errors.full_messages.first }
+          end
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to @post, alert: 'To much comments in one tree (5 comments max)' }
         end
       end
     end
   end
-
-  def show
-    redirect_to post_path(@post)
-  end
-
   def edit
-
+    respond_to do |format|
+      format.js { render 'edit', status: :created, location: @post }
+    end
   end
 
   def update
-    if @comment.update(comment_params)
-      redirect_to @post
-    else
-      render 'edit'
+    respond_to do |format|
+      if @comment.update(comment_params)
+        format.js
+        # format.js {render 'update', status: :created, location: @post}
+        format.html { redirect_to @post, notice: 'Comment was successfully updated.' }
+      else
+        format.html { redirect_to @post, alert: 'Smth went wrong..' }
+      end
     end
   end
 
   def destroy
     respond_to do |format|
       if @comment.destroy
+        format.js { render 'destroy', status: :created, location: @post }
         format.html { redirect_to @post, notice: 'Comment was successfully destroyed.' }
       else
         format.html { redirect_to @post, alert: 'Smth went wrong..' }
       end
     end
   end
+
 
   private
 
@@ -67,7 +80,7 @@ class CommentsController < ApplicationController
     if( @comment.author_id == @current_user.id && @current_user.baned == false)
     else
       respond_to do |format|
-        format.html { redirect_to @post, alert: 'You have no rights' }
+        format.html { redirect_to @post, alert: 'У вас нет прав' }
       end
     end
   end

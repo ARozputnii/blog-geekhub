@@ -29,5 +29,5 @@ class Comment < ApplicationRecord
   validates  :body, presence: true,
              length: { minimum: 1}
   # gem ancestry (вложенные коментарии)
-  has_ancestry
+  has_ancestry orphan_strategy: :adopt
 end

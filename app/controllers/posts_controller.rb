@@ -82,7 +82,7 @@ class PostsController < ApplicationController
 
         # checking autorithations user or not
   def owner
-    if (@post.author_id == @current_user.id && Time.now - @post.created_at < 3601 && @current_user.baned == false)
+    if (@post.author_id == @current_user.id && @current_user.baned == false)
     else
       respond_to do |format|
         format.html { redirect_to posts_url, alert: 'У вас нет прав, зарегестрируйтесь.' }

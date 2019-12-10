@@ -16,7 +16,7 @@ class AuthorsController < ApplicationController
 
       #AuthorMailer.registration_confirmation(@author).deliver
 
-      flash[:success] = "Пожалуйста, подтвердите свой адрес электронной почты"
+      flash[:notice] = "Пожалуйста, подтвердите свой адрес электронной почты"
       redirect_to root_url
     else
       flash[:error] = "что-то пошло не так!"
@@ -51,6 +51,7 @@ class AuthorsController < ApplicationController
       flash[:error] = "Пользователя не существует"
       redirect_to root_url
     end
+
   end
   private
 

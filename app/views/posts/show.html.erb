@@ -24,18 +24,17 @@
       <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-success' %>
     <% end  %>
   <% end  %>
+
   <% if current_user %>
     <% if current_user.baned == false  %>
       <%= render 'comments/form' %>
     <% else %>
       <div class="alert alert-danger" role="alert">
         You have no rights to leave comments
-        <br>
       </div>
     <% end  %>
-
-    <div class="container">
-      <%= ancestry_nested_comments @post.comments.arrange(order: :created_at)  %>
+    <div id="new_comment"> <!--добавление коментария js-->
+      <%= ancestry_nested_comments @post.comments.arrange(order: :created_at) %>
     </div>
   <% else %>
   <div style="text-align: center">

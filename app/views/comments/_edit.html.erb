@@ -1,0 +1,23 @@
+<span id="hide_edit">
+  <%= form_with(model: [ @post, @comment ]) do || %>
+      <% if @comment.errors.any? %>
+        <div id="error_explanation" style="color: red; text-align: center;">
+          <% @comment.errors.full_messages.each do |msg| %>
+            <li ><%= msg %></li>
+          <% end %>
+        </div>
+      <% end %>
+    <%= f.hidden_field :parent_id, value: @comment.parent_id %>
+    <div class="form-group row">
+      <%= f.label :body,"Add comment", id:'hide_label_form', class:"col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= f.text_area :body, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit class:"btn btn-outline-success", id:'hide_button_form' %>
+      <%= link_to 'Back', @post, class:'btn btn-outline-success'  %>
+    </div>
+  <% end %>
+</span>
