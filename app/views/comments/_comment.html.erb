@@ -1,5 +1,5 @@
 
-  <div class="card_comments comment<%= comment.id %>" id="comment-<%= comment.id %>">
+  <div class="card_comments" id="comment-<%= comment.id %>">
     <div class="card-header" >
       <% if updated(comment) %>
         <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>

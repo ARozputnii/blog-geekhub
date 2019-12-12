@@ -10,6 +10,7 @@ class VotesController < ApplicationController
     else
       # @comment = Comment.find(params[:comment_id])
       @comment.votes.create!(author: current_user, vote: 1)
+      format.js { render 'comments/like', status: :created, location: @post }
     end
     redirect_to @post
   end
@@ -21,6 +22,7 @@ class VotesController < ApplicationController
     else
       # @comment = Comment.find(params[:comment_id])
       @comment.votes.create!(author: current_user, value: 1)
+      format.js { render 'comments/like', status: :created, location: @post }
     end
     redirect_to @post
   end
