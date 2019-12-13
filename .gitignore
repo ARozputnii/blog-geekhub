@@ -72,4 +72,5 @@ database.yml
 /.idea
 .idea
 # Ignore application configuration
-/config/application.yml
+/config/master.key
+

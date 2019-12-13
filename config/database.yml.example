@@ -1,0 +1,36 @@
+
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: blog-geekhub_development
+  username: <%= Rails.application.credentials.aws[:db_name] %>
+  password: <%= Rails.application.credentials.aws[:db_password] %>
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+test:
+  <<: *default
+  database: blog-geekhub_test
+  username: <%= Rails.application.credentials.aws[:db_name] %>
+  password: <%= Rails.application.credentials.aws[:db_password] %>
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+production:
+  <<: *default
+  database: blog-geekhub_production
+  username: <%= Rails.application.credentials.aws[:db_name] %>
+  password: <%= Rails.application.credentials.aws[:db_password] %>
+
+
+#  <%= Rails.application.credentials.aws[:db_name] %>
+#  <%= Rails.application.credentials.aws[:db_password] %>
+
