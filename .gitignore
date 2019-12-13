@@ -67,10 +67,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-config/application.yml
 database.yml
 /.idea
 .idea
-# Ignore application configuration
-/config/master.key
-
