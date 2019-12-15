@@ -67,7 +67,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-database.yml
 /.idea
 .idea
 config/aplications.yml
