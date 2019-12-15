@@ -1,14 +1,11 @@
 class VotesController < ApplicationController
   before_action :find_post
   before_action :find_comment
-  before_action :find_vote, only: [:destroy]
-  #before_action :find_comment
 
   def create
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
-      # @comment = Comment.find(params[:comment_id])
       @comment.votes.create!(author: current_user, vote: 1)
       format.js { render 'comments/like', status: :created, location: @post }
     end
@@ -20,7 +17,6 @@ class VotesController < ApplicationController
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
-      # @comment = Comment.find(params[:comment_id])
       @comment.votes.create!(author: current_user, value: 1)
       format.js { render 'comments/like', status: :created, location: @post }
     end
@@ -41,9 +37,6 @@ class VotesController < ApplicationController
     @comment = Comment.find(params[:comment_id])
   end
 
-  def find_vote
-    @vote = @post.comment.votes.find(params [:id])
-  end
 
 end
 

@@ -1,19 +1,14 @@
-
-  <%= form_with(model: [ @post, @post.comments.build ]) do |form| %>
-    <% if current_user %>
+<div class="reply_comment_form" id="reply_comment_form">
+  <div class="col-md-8">
+    <%= form_with(model: [ @post, @post.comments.build ]) do |form| %>
+      <!--# ancestry-->
       <%= form.hidden_field :parent_id, value: params[:parent_id] %>
       <div class="form-group row">
-        <div class="col-sm-2" style="margin: 2% 0 0 2%">
-          <%= form.label :body , id:'hide_label_form' %>
-          <div class="actions" style="padding-bottom: 5%">
-            <%= form.submit  class:"btn btn-outline-success", id:'hide_button_form' %>
-          </div>
+        <div class="col-sm-2 actions" style="margin: 2% 0 0 2%; padding-bottom: 5%">
+          <%= form.submit "Ответить",  class:"btn btn-outline-dark" %>
         </div>
         <%= form.text_area :body, class:"form-control col-sm-7" %>
       </div>
-    <% else %>
-      <%= link_to "log in to view or add a comment", login_path, class:"btn btn-outline-dark" ,style: "margin: 0% 0% 5% 2.5%"%>
-    <% end  %>
-  <% end %>
-
-
+    <% end %>
+  </div>
+</div>

@@ -15,18 +15,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new(parent_id: params[:parent_id])
   end
 
+
   def create
     if @current_user.baned == false
       @comment = @post.comments.create(comment_params)
       @comment.author_id = current_user.id
       if @comment.ancestors.count <= 4
         respond_to do |format|
-          # next chooses js.erb for creating new comment or nested(reply)
-          if @comment.save && !@comment.ancestry.nil?
-            format.js { render 'create_reply', status: :created, location: @post }
-          elsif @comment.save && @comment.parent_id.nil?
+          if @comment.save
             format.js { render 'create', status: :created, location: @post }
-            format.html { redirect_to @post, notice: 'Comment was successfully created.' }
           else
             format.html { redirect_to @post, alert: @comment.errors.full_messages.first }
           end
@@ -36,8 +33,11 @@ class CommentsController < ApplicationController
           format.html { redirect_to @post, alert: 'To much comments in one tree (5 comments max)' }
         end
       end
+    else
+      redirect_to home_path, notice: 'Aborted. You are banned.'
     end
   end
+
   def edit
     respond_to do |format|
       format.js { render 'edit', status: :created, location: @post }
@@ -48,7 +48,6 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.update(comment_params)
         format.js
-        # format.js {render 'update', status: :created, location: @post}
         format.html { redirect_to @post, notice: 'Comment was successfully updated.' }
       else
         format.html { redirect_to @post, alert: 'Smth went wrong..' }
@@ -77,7 +76,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
   end
   def owner
-    if( @comment.author_id == @current_user.id && @current_user.baned == false)
+    if ( @comment.author_id == @current_user.id && @current_user.baned == false )
     else
       respond_to do |format|
         format.html { redirect_to @post, alert: 'У вас нет прав' }

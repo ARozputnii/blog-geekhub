@@ -1,18 +1,11 @@
-<div id="form_comment">
+<div class="new_comment_form coments" id="form_new">
   <%= form_with(model: [ @post, @post.comments.build ]) do |form| %>
-    <% if current_user %>
-      <%= form.hidden_field :parent_id %>
-      <div class="form-group row">
-        <div class="col-sm-2" style="margin: 2% 0 0 2%">
-          <%= form.label :body, id:'hide_label_form_new' %>
-          <div class="actions" style="padding-bottom: 5%">
-            <%= form.submit id:'hide_label_form_new',  class:"btn btn-outline-success" %>
-          </div>
-        </div>
-          <%= form.text_area :body, class:"form-control col-sm-7" %>
-      </div>
-    <% else %>
-      <%= link_to "log in to view or add a comment", login_path, class:"btn btn-outline-dark" ,style: "margin: 0% 0% 5% 2.5%"%>
-    <% end  %>
+    <%= form.hidden_field :parent_id %>
+    <div class="form-group col-sm-7">
+      <%= form.text_area :body, class:"form-control " %>
+      <%= form.submit "Добавить комментарий", class:'btn btn-outline-dark' %>
+    </div>
+
   <% end %>
 </div>
+
