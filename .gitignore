@@ -72,4 +72,3 @@ yarn-debug.log*
 config/aplications.yml
 #
 yarn.lock
-Gemfile.lock
