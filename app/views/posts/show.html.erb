@@ -1,4 +1,5 @@
-<div class="card mb-3, show">
+<div class="container-fluid">
+  <div class="card mb-3, show">
   <% if @post.image.attached? %>
 	<!-- @post.image.present? will always return true, use attached? to check presence -->
 	    <%= image_tag @post.image ,alt: 'pic', style:"height: 500px; margin: 5% 0 0 0",  class: "mx-auto d-block" if @post.image.attached? %>
@@ -6,31 +7,40 @@
     <%= image_tag("http://www.santis.mn/nimage.png", {:style => "width: 500px; margin: 3% auto"}) %>
   <% end %>
   <div class="card-body">
-    <h5 class="card-title"> <%= @post.title %> </h5>
+    <h5 class="card-title" style="text-align: center; padding-bottom: 2%"> <%= @post.title %> </h5>
     <p class="card-text"> <%= @post.content %> </p>
       <p class="blockquote-footer">author: <%= full_name(@post) %></p>
-      <p class="blockquote-footer" style="font-size: 13px">
+    <div class="row" style="padding-top: 5%">
+      <div class="col-md">
+        <% if current_user %>
+          <% if @post.author_id == @current_user.id  %>
+            <%= link_to 'Редактировать', edit_post_path(@post), class:'btn btn-outline-dark' %>
+            <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-dark' %>
+          <% end  %>
+        <% end  %>
+      </div>
+      <div class="col-md offset-md-4">
+        <p class="" style="font-size: 15px; padding-top: 3%">
         <span data-toggle="tooltip" data-placement="top" title="(<%= @post.created_at %>)">
           <%= fa_icon "calendar" %> <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
           <%= fa_icon "eye", style: "margin: 0 10px" %><%= @post.impressionist_count(:filter=>:ip_address) %>
         </span>
-      </p>
+        </p>
+      </div>
+    </div>
 
   </div>
 </div>
-  <% if current_user %>
-    <% if @post.author_id == @current_user.id  %>
-      <%= link_to 'Edit', edit_post_path(@post), class:'btn btn-outline-success' %>
-      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-success' %>
-    <% end  %>
-  <% end  %>
-<!--
-comments
--->
-<div class="container-fluid">
+
+  <!--
+  comments
+  -->
   <% if current_user  %>
     <% if @current_user.baned == false  %>
       <%= render 'comments/form' %>
+      <div class='new_comment'>
+        <%= ancestry_nested_comments @post.comments.arrange(order: :created_at) %>
+      </div>
     <% else %>
       <div class="container">
         <div class="alert alert-danger" role="alert">
@@ -39,31 +49,10 @@ comments
       </div>
     <% end  %>
   <% else %>
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-light" role="alert">
       <div style="text-align: center">
-        <%= link_to 'login to view and add comments', login_path%>
+        <%= link_to 'Что бы посмотреть или добавить коментарии - залогиньтесь! ', login_path, class: "already_liked"%>
       </div>
     </div>
   <% end  %>
 </div>
-<div class='new_comment'>
-  <%= ancestry_nested_comments @post.comments.arrange(order: :created_at) %>
-</div>
-<!--
-  <%# if current_user %>
-    <%# if current_user.baned == false  %>
-      <%#= render 'comments/form' %>
-    <%# else %>
-      <div class="alert alert-danger" role="alert">
-        У Вас нет прав для добавления комментриев.
-      </div>
-    <%# end  %>
-    <div class="comments new_comment"> <!--добавление коментария js-->
-      <%#= ancestry_nested_comments @post.comments.arrange(order: :created_at) %>
-    </div>
-  <%# else %>
-  <div style="text-align: center">
-    <%#= link_to 'login to view and add comments', login_path%>
-  </div>
-  <%# end  %>
--->

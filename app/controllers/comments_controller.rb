@@ -66,24 +66,26 @@ class CommentsController < ApplicationController
     end
   end
 
-
   private
 
   def find_post
     @post = Post.find(params[:post_id])
   end
+
   def find_comment
     @comment = @post.comments.find(params[:id])
   end
+
   def owner
-    if ( @comment.author_id == @current_user.id && @current_user.baned == false )
-    else
+    if ( @comment.author_id == @current_user.id && @current_user.baned == true )
       respond_to do |format|
         format.html { redirect_to @post, alert: 'У вас нет прав' }
       end
     end
   end
+
   def comment_params
     params.require(:comment).permit( :post_id, :body, :author_id, :parent_id)
   end
+
 end

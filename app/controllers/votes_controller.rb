@@ -4,23 +4,30 @@ class VotesController < ApplicationController
 
   def create
     if already_liked?
-      flash[:notice] = "You can't like more than once"
+      redirect_to @post, alert: 'Вы уже оставляли оценку!'
     else
-      @comment.votes.create!(author: current_user, vote: 1)
-      format.js { render 'comments/like', status: :created, location: @post }
+      respond_to do |format|
+        if @comment.votes.create!(author: current_user, vote: 1)
+          format.js { render 'comments/like', status: :created, location: @post }
+        else
+          format.html { redirect_to @post, alert: 'Вы уже оставляли оценку!' }
+        end
+      end
     end
-    redirect_to @post
   end
 
-  # dont work
   def create_dis
     if already_liked?
-      flash[:notice] = "You can't like more than once"
+      redirect_to @post, alert: 'You have already liked'
     else
-      @comment.votes.create!(author: current_user, value: 1)
-      format.js { render 'comments/like', status: :created, location: @post }
+      respond_to do |format|
+        if @comment.votes.create!(author: current_user, value: 1)
+          format.js { render 'comments/like', status: :created, location: @post }
+        else
+          format.html { redirect_to @post, alert: 'You have already liked' }
+        end
+      end
     end
-    redirect_to @post
   end
 
   private

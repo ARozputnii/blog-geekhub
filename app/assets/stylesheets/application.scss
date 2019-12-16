@@ -3,7 +3,8 @@
 @import "bootstrap";
 
 body{
-  min-width: 450px;
+  margin: 0;
+  min-width: 430px;
   font-size: 14px;
   font-family: 'Playfair Display' serif;
 }
@@ -147,14 +148,21 @@ body{
 .singup{
   display: block;
 }
+
+/* new */
+
+.post_new{
+
+}
+/*show*/
+
+
 .label_show {
 	font-size:15px;
 	font-style: italic;
 }
 .show {
-	background: #ceeff2;
-	margin-top: 20px;
-	margin-bottom: 50px;
+  background: linear-gradient(to bottom, #48484b, #78787d, #f1f1f4, white);
 }
 
 .footer_index p {
@@ -166,9 +174,7 @@ body{
   padding: 10px 0px 10px;
 }
 
-.background {
-  background: #e9edf5;
-}
+
 
 /*comment*/
 .card_comments{
@@ -176,6 +182,18 @@ body{
 }
 .ancestry_nested_comments{
   margin-left: 5%;
+}
+.new_comment_form{
+  background: linear-gradient(to bottom, white, #f1f1f4);
+}
+.new_comment_form .col-sm-8{
+  padding: 5% 0;
+}
+.new_comment_form .form-control{
+  border: 1px solid #5e5e58; /* Параметры рамки */
+  background: #fcfcff;
+  height: 120px;
+  box-shadow: 0 0 5px #9c9c9c; /* Параметры тени */
 }
 
 .icon_like:link {  color: #555;}
@@ -187,3 +205,9 @@ body{
 .icon_dislike:visited { text-decoration: none; color: darkred;}
 .icon_dislike:active { text-decoration: none; color: darkred;}
 .icon_dislike:hover { color:red; text-decoration: none;}
+
+.already_liked:link { text-decoration: none; color: #999999;}
+.already_liked:visited { text-decoration: none; color: #999999;}
+.already_liked:active { text-decoration: none; color: #999999;}
+.already_liked:hover { color:#999999; text-decoration: none;}
+

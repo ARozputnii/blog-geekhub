@@ -1,5 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: %i[show edit update ]
+
   def index
     @author = Author.all
   end
@@ -12,10 +13,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
     if @author.save
       # AuthorMailer.with(author: @author).welcome_email.deliver_later
-        AuthorMailer.with(author: @author).registration_confirmation.deliver_later
-
-      #AuthorMailer.registration_confirmation(@author).deliver
-
+      AuthorMailer.with(author: @author).registration_confirmation.deliver_later
       flash[:notice] = "Пожалуйста, подтвердите свой адрес электронной почты"
       redirect_to root_url
     else
@@ -39,9 +37,9 @@ class AuthorsController < ApplicationController
 
   def show
   end
+
   def confirm_email
     @author = Author.find_by_confirm_token(params[:id])
-    #@author = Author.find(params[:id])
     if @author
       @author.email_activate
       flash[:success] = "Ваше сообщение было подтверждено.
@@ -51,8 +49,8 @@ class AuthorsController < ApplicationController
       flash[:error] = "Пользователя не существует"
       redirect_to root_url
     end
-
   end
+
   private
 
   def set_author
@@ -62,4 +60,5 @@ class AuthorsController < ApplicationController
   def author_params
     params.require(:author).permit(:email, :password, :password_confirmation, :first_name, :last_name, :gender, :birthday, :image)
   end
+
 end

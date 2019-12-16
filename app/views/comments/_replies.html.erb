@@ -1,13 +1,14 @@
+
 <div class="reply_comment_form" id="reply_comment_form">
   <div class="col-md-8">
     <%= form_with(model: [ @post, @post.comments.build ]) do |form| %>
       <!--# ancestry-->
       <%= form.hidden_field :parent_id, value: params[:parent_id] %>
       <div class="form-group row">
-        <div class="col-sm-2 actions" style="margin: 2% 0 0 2%; padding-bottom: 5%">
+        <div class="col-md-2 actions" style="margin: 2% 0 0 2%; padding-bottom: 5%">
           <%= form.submit "Ответить",  class:"btn btn-outline-dark" %>
         </div>
-        <%= form.text_area :body, class:"form-control col-sm-7" %>
+        <%= form.text_area :body, class:"form-control col-md-7" %>
       </div>
     <% end %>
   </div>

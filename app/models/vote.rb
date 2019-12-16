@@ -25,10 +25,4 @@ class Vote < ApplicationRecord
   belongs_to :comment
   belongs_to :author
 
-  #вещь может закладкой с помощью владельца максимум один раз
-  # не работает на вложености коммент.
-  # fixed by 'already_liked?' in vote_controller
-  #validates_uniqueness_of :vote, scope: :author_id
-
-
 end

@@ -1,4 +1,5 @@
 class PasswordResetsController < ApplicationController
+
   def create
     author = Author.find_by_email(params[:email])
     author.send_password_reset if author
@@ -19,4 +20,5 @@ class PasswordResetsController < ApplicationController
       render :edit
     end
   end
+
 end

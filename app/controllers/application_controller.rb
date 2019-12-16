@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :unloged
   before_action :banned?
 
-
   def current_user
     if session[:author_id]
       @current_user ||= Author.find(session[:author_id])
@@ -21,7 +20,7 @@ class ApplicationController < ActionController::Base
     session[:author_id] = author.id
   end
 
-private
+  private
 
   def logged_in?
     !current_user.nil?
@@ -42,4 +41,5 @@ private
       end
     end
   end
+
 end

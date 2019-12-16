@@ -1,40 +1,58 @@
-
-<div class="coments comment-<%= comment.id %>" >
-  <div class="card-header field" >
-    <% if updated(comment) %>
-      <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
-    <% end  %>
-    <div class="row">
-      <div class="col">
-          <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
-            <%= comment.author.full_name %>
+<div class="container-fluid">
+  <div class="card_comments coments comment-<%= comment.id %>" >
+    <div class="card-header field" >
+      <% if updated(comment) %>
+        <p style="color:red; font-size: 14px">edited at <%= l comment.created_at, format: "%e %B " "%H:%M:%S" %></p>
+      <% end  %>
+      <div class="row">
+        <div class="col">
+            <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format: "%e %B " "%H:%M:%S" %>)">
+              <%= comment.author.full_name %>
+            </span>
+        </div>
+        <div class="col likes">
+          <% if current_user %>
+            <% check_vote = comment.votes.find { |vote| vote.author_id == current_user.id} %>
+          <% end %>
+          <% if current_user and check_vote == nil %>
+            <%= link_to post_comment_votes_path(@post, comment),remote: true ,method: :post, class: "icon_like" do %>
+              <%= fa_icon "thumbs-up" %>
+            <% end %>
+            <%= count_value(comment.votes) %>
+            <%= link_to post_comment_dislike_create_path(@post, comment),remote: true ,method: :post, class: "icon_dislike" do %>
+              <%= fa_icon "thumbs-down" %>
+            <% end %>
+            <%= count_vote(comment.votes) %> <!--Vote.all.count-->
+          <% else %>
+            <%= link_to post_comment_votes_path(@post, comment),remote: true ,method: :post, class: "already_liked" do %>
+              <%= fa_icon "thumbs-up" %>
+            <% end %>
+            <%= count_value(comment.votes) %>
+            <%= link_to post_comment_dislike_create_path(@post, comment),remote: true ,method: :post, class: "already_liked" do %>
+              <%= fa_icon "thumbs-down" %>
+            <% end %>
+            <%= count_vote(comment.votes) %>
+          <% end %>
+        </div>
+        <div class="col-md">
+          <span data-toggle="tooltip" data-placement="top" title="(<%= l comment.created_at, format:"%H:%M:%S" %>)">
+            <%= l comment.created_at, format: "%e %B %Y" %>
           </span>
-      </div>
-      <div class="col">
-        <% if current_user %>
-          <%= link_to post_comment_votes_path(@post, comment),remote: true ,method: :post, class: "icon_like" do %>
-            <%= fa_icon "thumbs-up" %>
-          <% end %>
-          <%= count_value(comment.votes) %>
-          <%= link_to post_comment_dislike_create_path(@post, comment),remote: true ,method: :post, class: "icon_dislike" do %>
-            <%= fa_icon "thumbs-down" %>
-          <% end %>
-          <%= count_vote(comment.votes) %> <!--Vote.all.count-->
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card-body field">
-    <% if current_user %>
-      <p class="card-text"><%= comment.body %>
-        <br><br>
-        <%= link_to 'Reply',  new_post_comment_path(comment.post, :parent_id => comment.id, js: true), remote: true,  class:'btn btn-outline-dark' %>
-        <% if (@current_user.id == comment.author_id && Time.now - comment.created_at < 3600) %>
-          <%= link_to 'Edit',  edit_post_comment_path(@post, comment), remote: true, class:'btn btn-outline-dark' %>
-          <%= link_to 'Destroy Comment', [comment.post, comment], remote: true,
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' }, class:"btn btn-outline-dark"%>
-        <% end %>
-    <% end  %>
+    <div class="card-body field">
+      <% if current_user %>
+        <p class="card-text"><%= comment.body %>
+          <br><br>
+          <%= link_to 'Reply',  new_post_comment_path(comment.post, :parent_id => comment.id, js: true), remote: true,  class:'btn btn-outline-dark' %>
+          <% if (@current_user.id == comment.author_id && Time.now - comment.created_at < 3600) %>
+            <%= link_to 'Edit',  edit_post_comment_path(@post, comment), remote: true, class:'btn btn-outline-dark' %>
+            <%= link_to 'Destroy Comment', [comment.post, comment], remote: true,
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' }, class:"btn btn-outline-dark"%>
+          <% end %>
+      <% end  %>
+    </div>
   </div>
 </div>

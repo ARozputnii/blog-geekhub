@@ -9,22 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
-
-    <% if pop_up and current_user == nil %>
-      <script>alert('Sign up to see all the functionality of the site');</script>
-    <% end %>
-
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a><%= link_to "RoR GH", root_path, class:"navbar-brand mr-auto" %></a>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -36,7 +28,6 @@
                   <a><%= link_to 'Новый пост', new_post_path, class:"a nav-link" %></a>
                 <% end %>
               <% end %>
-
             </li>
             <% if current_user %>
               <li class="nav-item">
@@ -66,6 +57,13 @@
         </div>
       </nav>
     </div> <!--navbar-->
+    <% if pop_up and current_user == nil %>
+      <div class="alert alert-light" role="alert"
+        <div style="text-align: center">
+          <%= link_to 'Залогиньтесь что бы увидеть весь функционал сайта.', login_path, class: "already_liked"%>
+        </div>
+      </div>
+    <% end %>
     <div class="container-fluid">
       <% if notice != nil  %>
         <p class="alert alert-dark" role="alert"><%= notice %></p>
@@ -74,6 +72,5 @@
       <% end %>
     </div>
     <%= yield %>
-
   </body>
 </html>
