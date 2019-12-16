@@ -70,5 +70,3 @@ yarn-debug.log*
 /.idea
 .idea
 config/aplications.yml
-#
-yarn.lock
