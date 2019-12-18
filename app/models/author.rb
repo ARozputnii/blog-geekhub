@@ -35,6 +35,14 @@ class Author < ApplicationRecord
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
   validates :password_digest, presence: true, length: { minimum: 8 }
+  validate :pass_val
+  def pass_val
+    if password.present?
+      if password.count('a-z') <= 0 || password.count('A-Z') <= 0 # || password_digest.count((0-9).to_s) <= 0
+        errors.add(:password, 'must contain 1 small letter, 1 capital letter and minimum 8 symbols')
+      end
+    end
+  end
 
   before_create :confirmation_token
 

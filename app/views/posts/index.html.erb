@@ -18,7 +18,9 @@
   </div><!-- carusel-->
   <div > <!--Post.first-->
     <div class="single-post">
-      <h3><%= link_to @post.title, @post, class: "index__link" %></h3>
+      <% if @post.present? %>
+        <h3><%= link_to @post.title, @post, class: "index__link" %></h3>
+      <% end %>
     </div>
   </div>
   <div>
