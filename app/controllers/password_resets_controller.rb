@@ -1,4 +1,5 @@
 class PasswordResetsController < ApplicationController
+  before_action :find_token , only: %i[edit, update]
 
   def create
     author = Author.find_by_email(params[:email])
@@ -7,11 +8,9 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-    @author = Author.find_by_confirm_token!(params[:id])
   end
 
   def update
-    @author = Author.find_by_confirm_token!(params[:id])
     if @author.password_reset_sent_at < 2.hours.ago
       redirect_to new_password_reset_path, :alert => "Срок действия сброса пароля истек, повторите процеду."
     elsif @author.update_attributes(params.require(:author).permit(:password, :password_confirmation))
@@ -20,5 +19,9 @@ class PasswordResetsController < ApplicationController
       render :edit
     end
   end
+  private
 
+  def find_token
+    @author = Author.find_by_confirm_token!(params[:id])
+  end
 end

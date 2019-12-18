@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   before_action :require_login, only: %i[create edit update destroy]
   before_action :find_post
   before_action :find_comment, only: %i[show edit update destroy]
@@ -33,8 +32,6 @@ class CommentsController < ApplicationController
           format.html { redirect_to @post, alert: 'To much comments in one tree (5 comments max)' }
         end
       end
-    else
-      redirect_to home_path, notice: 'Aborted. You are banned.'
     end
   end
 
@@ -78,9 +75,7 @@ class CommentsController < ApplicationController
 
   def owner
     if ( @comment.author_id == @current_user.id && @current_user.baned == true )
-      respond_to do |format|
-        format.html { redirect_to @post, alert: 'У вас нет прав' }
-      end
+      redirect_to @post, alert: 'У вас нет прав' }
     end
   end
 
