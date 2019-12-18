@@ -31,6 +31,7 @@ class VotesController < ApplicationController
   end
 
   private
+
   # one author - one like
   def already_liked?
     Vote.where(author_id: current_user.id, comment_id:
@@ -40,10 +41,8 @@ class VotesController < ApplicationController
   def find_post
     @post = Post.find(params[:post_id])
   end
+
   def find_comment
     @comment = Comment.find(params[:comment_id])
   end
-
-
 end
-

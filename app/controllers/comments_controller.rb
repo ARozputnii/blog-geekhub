@@ -74,13 +74,12 @@ class CommentsController < ApplicationController
   end
 
   def owner
-    if ( @comment.author_id == @current_user.id && @current_user.baned == true )
-      redirect_to @post, alert: 'У вас нет прав' }
+    if (@comment.author_id == @current_user.id && @current_user.baned == true )
+      redirect_to @post, alert: 'У вас нет прав'
     end
   end
 
   def comment_params
-    params.require(:comment).permit( :post_id, :body, :author_id, :parent_id)
+    params.require(:comment).permit(:post_id, :body, :author_id, :parent_id)
   end
-
 end

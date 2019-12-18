@@ -6,17 +6,17 @@ class PostsController < ApplicationController
 
   def index
     # seach in db with paginate
-    if params[:search]
-      @posts = Post.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 3)
-    else
-      @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
-    end
+    @posts = if params[:search]
+               Post.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+             else
+               Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+             end
     @post = Post.first
     @author = current_user
   end
 
   def show
-    #counter
+    # counter
     impressionist(@post)
   end
 
@@ -28,12 +28,11 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     if @current_user.baned == false
-    @post = current_user.posts.build(post_params)
+      @post = current_user.posts.build(post_params)
       respond_to do |format|
         if @post.save
           format.html { redirect_to @post, notice: 'Пост был успешно создан.' }
@@ -64,23 +63,23 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # checking autorithations user or not
-    def owner
-      if (@post.author_id == @current_user.id && @current_user.baned == false)
-      else
-        respond_to do |format|
-          format.html { redirect_to posts_url, alert: 'У вас нет прав, зарегестрируйтесь.' }
-        end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # checking autorithations user or not
+  def owner
+    if @post.author_id == @current_user.id && @current_user.baned == false
+    else
+      respond_to do |format|
+        format.html { redirect_to posts_url, alert: 'У вас нет прав, зарегестрируйтесь.' }
       end
     end
+  end
 
-    def post_params
-      params.require(:post).permit(:title, :content, :author_id, :image)
-    end
-
+  def post_params
+    params.require(:post).permit(:title, :content, :author_id, :image)
+  end
 end

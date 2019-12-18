@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
 
   def require_login
     redirect_to login_path unless logged_in?
-
   end
 
   def login_in(author)
@@ -36,10 +35,7 @@ class ApplicationController < ActionController::Base
 
   def banned?
     if current_user.present?
-      if current_user.baned == true
-        flash[:alert] = 'Вы не сможете создавать и комментировать посты (бан на 99999дней)'
-      end
+      flash[:alert] = 'Вы не сможете создавать и комментировать посты (бан на 99999дней)' if current_user.baned == true
     end
   end
-
 end

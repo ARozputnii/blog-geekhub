@@ -6,7 +6,7 @@ module ApplicationHelper
 
   # count actions
   def pop_up
-    true if cookies[:"actions"] % 5 == 0
+    true if cookies[:actions] % 5 == 0
   end
 
   # gem ancestry (for nested comments)
@@ -16,20 +16,18 @@ module ApplicationHelper
     end.join.html_safe
   end
 
-
   # check owner or admin or not, time limit 1 hour
   def check_edit_rights(current_user, sample)
-    true if (current_user.id == sample.author_id && Time.now - sample.created_at < 3600 && current_user.baned == false)
+    true if current_user.id == sample.author_id && Time.now - sample.created_at < 3600 && current_user.baned == false
   end
 
-
-  #dislike
+  # dislike
   def count_value(sample)
     sample.where(value: nil).count
   end
-  #like
+
+  # like
   def count_vote(sample)
     sample.where(vote: nil).count
   end
-
 end

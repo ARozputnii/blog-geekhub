@@ -27,7 +27,7 @@ class Comment < ApplicationRecord
   has_many   :votes, dependent: :destroy
 
   validates  :body, presence: true,
-             length: { minimum: 1}
+                    length: { minimum: 1 }
   # gem ancestry (вложенные коментарии)
   has_ancestry orphan_strategy: :adopt
 end
