@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   before_action :owner, only: %i[edit update destroy]
 
   def index
-    #подвязка к родетелю по даным дб
+    # подвязка к родетелю по даным дб
     @post.comments = @post.comments.arrange(order: :created_at)
   end
 
@@ -13,7 +13,6 @@ class CommentsController < ApplicationController
     # вложеные коментарии наследие гем ancestry
     @comment = Comment.new(parent_id: params[:parent_id])
   end
-
 
   def create
     if @current_user.baned == false
@@ -74,9 +73,7 @@ class CommentsController < ApplicationController
   end
 
   def owner
-    if (@comment.author_id == @current_user.id && @current_user.baned == true )
-      redirect_to @post, alert: 'У вас нет прав'
-    end
+    redirect_to @post, alert: 'У вас нет прав' if @comment.author_id == @current_user.id && @current_user.baned == true
   end
 
   def comment_params

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
   ActiveAdmin.routes(self)
   root 'posts#index'
 
