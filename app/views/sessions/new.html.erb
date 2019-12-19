@@ -1,5 +1,4 @@
 <div style="margin: 5%">
-
   <%= form_tag sessions_path do  %>
     <div class='form-group row'>
       <%= label_tag :email , "Введите Ваш Email", :class =>"col-sm-2 col-form-label"%>
@@ -14,8 +13,6 @@
     <div class="actions" style="btn btn-outline-success">
       <%= submit_tag 'Ввойти', :class => "btn btn-outline-dark" %>
       <%= link_to 'Назад', posts_path , class:"btn btn-outline-dark" , style:"margin-left: 10px;"%>
-
     </div>
   <% end %>
-  <p></p>
 </div>

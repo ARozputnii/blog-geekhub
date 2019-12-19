@@ -1,10 +1,19 @@
-<% if @author.image.attached? %>
-  <!-- @post.image.present? will always return true, use attached? to check presence -->
-  <%= image_tag(@author.image, style: "width: 200px; height: 200px; border-radius: 200px; box-shadow: 0 0 20px #666; ") if @author.image.attached? %>
-<% else %>
-  <%= image_tag("https://us.123rf.com/450wm/denisnata/denisnata1210/denisnata121000848/15814297-white-domestic-goose-isolated-on-white-background.jpg?ver=6", style: "width: 200px; height: 200px; border-radius: 200px; box-shadow: 0 0 20px #666; ") %>
-<% end %>
+<% link = "https://us.123rf.com/450wm/denisnata/denisnata1210/denisnata121000848/15814297-white-domestic-goose-isolated-on-white-background.jpg?ver=6" %>
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col-md-3 offset-md-3">
+      <% if @author.image.attached? %>
+        <!-- @post.image.present? will always return true, use attached? to check presence -->
+        <%= image_tag(@author.image, class:"icon__author__show") if @author.image.attached? %>
+      <% else %>
+        <%= image_tag(link, class:"icon__author__show") %>
+      <% end %>
+    </div>
+    <div class="col-md-3">
+      <p><%= @author.full_name %></p>
+      <p><%= @author.email %></p>
+      <p>День рождения: <%= @author.birthday %></p>
+      <%= link_to "Изменить пароль", new_password_reset_path  %>
+    </div>
+  </div>
 </div>
-<p><%= @author.full_name %></p>
-<p><%= @author.email %></p>
-

@@ -46,25 +46,23 @@
             <%= form.password_field :password_confirmation, class:"form-control" %>
           </div>
         </div>
-        <!--  <div class="form-group row"  >
-          <%#= form.label :gender, class:"col col-form-label" %>
-          <div class="col">
-            <%#= form.text_field :gender, class:"form-control" %>
-          </div>
-        </div>-->
         <div class="form-group row"  >
           <%= form.label :birthday,"День рождения:", class:"col-sm-3 col-form-label" %>
           <div class="col-sm-6">
             <%= form.date_field :birthday, class:"form-control" %>
           </div>
         </div>
+        <div class="form-group  ">
+          <%= form.label :gender, "Мужщина", value: "male"  %>
+          <%= form.radio_button :gender, 'male' %>
+          <%= form.label :gender, "Женщина", value: "female" %>
+          <%= form.radio_button :gender, 'female' %>
+        </div>
         <div class="actions" style="padding-top: 15px">
           <%= form.submit 'Зарегестрировать',  class:"btn btn-outline-dark" %>
           <%= link_to 'Назад', posts_path , class:"btn btn-outline-dark" , style:"margin-left: 10px;"%>
         </div>
       </div>
-
     </div>
-
   <% end %>
 </div>

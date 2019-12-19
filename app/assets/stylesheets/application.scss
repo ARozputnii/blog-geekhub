@@ -130,7 +130,12 @@ body{
   border: 1px solid #555555; /* Параметры рамки */
   box-shadow: 0 0 5px #ccc; /* Параметры тени */
 }
-
+.icon__author__show{
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+  box-shadow: 0 0 20px #666;
+}
 
 .p_new {
 	font-size: 40px;

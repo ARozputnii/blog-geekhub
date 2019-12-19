@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <%= form_for @author, :url => password_reset_path(params[:id]) do |f| %>
+  <%= form_for @author, url: password_reset_path(params[:id]) do |f| %>
     <% if @author.errors.any? %>
       <div class="error_messages">
         <h2>Form is invalid</h2>
@@ -11,13 +11,13 @@
       </div>
     <% end %>
     <div class="form-group">
-      <%= f.label :password, "Введите новый пароль", :class =>"col-sm-2 col-form-label" %>
-      <%= f.password_field :password, :class => "col-form-control" %>
+      <%= f.label :password, "Введите новый пароль", class:"col-sm-2 col-form-label" %>
+      <%= f.password_field :password, class:"col-form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :password_confirmation, "Подтвердите новый пароль", :class =>"col-sm-2 col-form-label" %>
-      <%= f.password_field :password_confirmation, :class => "col-form-control" %>
+      <%= f.label :password_confirmation, "Подтвердите новый пароль", class:"col-sm-2 col-form-label" %>
+      <%= f.password_field :password_confirmation, class:"col-form-control" %>
     </div>
-    <div class="actions"><%= f.submit "Обновить", :class => "btn btn-outline-dark"  %></div>
+    <div class="actions"><%= f.submit "Обновить", class:"btn btn-outline-dark"  %></div>
   <% end %>
 </div>
